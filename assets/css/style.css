@@ -16,7 +16,6 @@
 
 * {
     font-family: 'Tajawal', sans-serif;
-    transition: all 3s;
 }
 
 *:focus {
@@ -1716,3 +1715,84 @@ ul.breadcrumb li a:hover {
     margin-left: 0.5em;
 }
 /* end restricted & prohibited */
+/* start help page */
+.search{
+    position: relative;
+}
+.help input {
+    border-color: var(--red-color);
+}
+.help input:focus {
+    border-color: var(--red-color);
+    box-shadow: 0 0 0 0.25rem var(--pink-color);
+}
+.help .search::before {
+    content: "\f002";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    color: var(--red-color);
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 1.25em;
+}
+.help-accordion .shuffle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border: 1px solid #dee2e6;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+.help-accordion .shuffle i {
+    color: var(--red-color);
+}
+.help-accordion .shuffle::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -14px;
+    border-width: 1rem 0.5rem 0;
+    border-color: transparent;
+    border-style: solid;
+}
+.help-accordion .shuffle.active {
+    background-color: var(--red-color);
+    color: white;
+}
+.help-accordion .shuffle.active i {
+    color: white
+}
+.help-accordion .shuffle.active::after{
+    border-top-color: var(--red-color);
+}
+.help-accordion .collapse {
+    transform: var(--transition);
+}
+.help-accordion .accordion .accordion-button {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    box-shadow: none;
+    color: #696969;
+};
+@media(max-width: 767px) {
+    .help-accordion .shuffle{
+        flex-direction: row;
+        height: 50px;
+        padding: 0.5rem;
+        border: 1px solid #dee2e6;
+        border-radius: 7px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    .help-accordion .shuffle span {
+        font-size: 1rem !important;
+    }
+}
+/* end help page */
