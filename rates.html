@@ -152,15 +152,15 @@
   </section>
 
   <!-- start shape now -->
-  <section  class="section-calculator">
+  <section class="section-calculator">
     <div class="container">
       <div class="w-lg-75 text-center mx-md-auto md-5">
-        <h1 class="h1 lh-sm">Ship Now</h1>
+        <h1 class="h1 lh-sm">Your Rates Are Ready!</h1>
       </div>
       <img src="assets/images/element-2.png" class="img-1" alt="img" />
       <div class="shipping-calculator mx-md-auto md-5" id="shipping-calculator">
         <form action="" class="w-100" method="post">
-          <div class="row">
+          <div class="row py-5">
             <div class="col-12">
               <h5>Find the Best Shipping Rates</h5>
             </div>
@@ -171,7 +171,7 @@
                   <i class="fas fa-map-marker-alt"></i>
                 </span>
                 <input type="text" id="us_zip_code" name="us_zip_code" class="form-control"
-                  placeholder="US Zip Code" aria-label="US Zip Code" aria-describedby="us-zip-code">
+                  placeholder="00972" aria-label="US Zip Code" aria-describedby="us-zip-code">
               </div>
             </div>
             <div class="col-md-4">
@@ -187,7 +187,7 @@
               </div>
               </div>
               <div class="col-md-4">
-                <label for="">Package Weight</label>
+                <label for="">33</label>
                 <div class="input-group ">
                   <span class="input-group-text input-group-calculator" id="basic-addon1">
                     <i class="fas fa-weight-hanging"></i>
@@ -197,17 +197,12 @@
                 </div>
                 <span class="weight-helper-txt">Enter a value up to 70 lbs</span>
               </div>
-              <div class="col-md-12">
-                <p class="text-calculator">
-                  If your package's length + width + height is greater than 60 inches,
-                  <span class="fw-bold" style="color: #DF3A27; cursor: pointer;"
-                    onclick="show_block_dimensions()">
-                    click here
-                  </span> to provide the dimensions
-                </p>
+              <div class="col-md-12 d-flex align-items-center my-3 justify-content-center justify-content-md-start">
+                <label class="me-2 fw-bold text-dark">Package Dimensions:</label>
+                <button class="btn btn-main rounded-pill" type="button">22 in X 12 in X 21 in</button>
               </div>
               <div class="col-12 text-center">
-                <button class="btn btn-ship-now">Check My Rates</button>
+                <button class="btn btn-main" type="button">Update Rates</button>
               </div>
             </div>
           </form>
@@ -215,63 +210,55 @@
         <div class="text-end">
             <img src="assets/images/element-2.png" class="img-2" alt="img" />
         </div>
-      <div class="block-dimensions">
-        <div class="row">
-          <div class="col-md-7 col-12">
-            <h3 class="fw-bold">Dimensions</h3>
-          </div>
-          <div class="col-md-5 col-12 text-end">
-            <button class="btn btn-dimensions" onclick="hide_block_dimensions()">OK</button>
-          </div>
-          <div class="col-12 my-2">
-            <label for="us_zip_code">Length:</label>
-            <div class="input-group my-2">
-              <span class="input-group-text input-group-calculator" id="us-zip-code">
-                <img src="assets/images/scale.png">
-              </span>
-              <input type="text" id="us_zip_code" name="us_zip_code" class="form-control"
-                placeholder="Package length" aria-label="Package length" aria-describedby="us-zip-code">
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <label for="us_zip_code">Width:</label>
-            <div class="input-group my-2">
-              <span class="input-group-text input-group-calculator" id="us-zip-code">
-                <img src="assets/images/resize.png">
-              </span>
-              <input type="text" id="us_zip_code" name="us_zip_code" class="form-control"
-                  placeholder="Package width" aria-label="Package width" aria-describedby="us-zip-code">
-            </div>
-          </div>
-          <div class="col-12 my-2">
-            <label for="us_zip_code">Height:</label>
-            <div class="input-group my-2">
-              <span class="input-group-text input-group-calculator" id="us-zip-code">
-                <img src="assets/images/resize (1).png">
-              </span>
-              <input type="text" id="us_zip_code" name="us_zip_code" class="form-control"
-                placeholder="Package height" aria-label="Package height" aria-describedby="us-zip-code">
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
+
   <section class="py-5 text-center">
     <div class="container">
-      <div class="mb-5">
-        <h2 class="h1">How EARTH SHIP Gets Great Rates</h2>
-      </div>
-      <h3 class="h2 mb-3">Long-Term Partnerships with Top Carriers</h3>
-      <p class="lh-lg mb-4 text-muted">
-        When you ship from the US with PackageHopper, you can be sure you’re getting fast, reliable international delivery at great rates. Thanks to our long-term partnerships, we can pass along some of the best rates around, that wouldn’t usually be available to the public.
-      </p>
-      <h3 class="h2 mb-3">Simplified Processing</h3>
-      <p class="lh-lg text-muted">
-        With PackageHopper, you share all of your shipment information, pack your items, and pay online—all from the comfort of your own home. Then, just drop off your shipment at a local location whenever it is convenient for you! By conveniently prepping your items at home, and taking them to the local drop-off, we can offer cheaper prices by cutting down on administrative costs.
+      <h2 class="h1 mb-3">1 Result Found </h2>
+      <p class="text-muted fs-5">
+        <strong class="text-dark fs-5">Please note: </strong>All shipments must be dropped off with the carrier and a printer is required for all services.
       </p>
     </div>
 </section>
+
+<section class="rates py-5">
+  <div class="container">
+    <div class="shipping mx-md-auto">
+      <div class="shipping-head">Best Value</div>
+      <div class="row p-5">
+        <div class="col-md-4 d-flex align-items-center mb-3">
+          <img class="w-25 me-4" src="./assets/images/second-why-ship.png" alt="">
+          <div>
+            <h5>DHL Express Medium Box</h5>
+            <h6 class="text-muted">Over 36 & up to 60 linear inches</h6>
+            <a href="#" class="text-decoration-underline DHL-link">More about DHL Express</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <ul class="text-muted list-unstyled">
+            <li class="mb-2">Top-Rated Global Carrier</li>
+            <li class="mb-2">3 - 8 Business Days</li>
+            <li class="mb-2">Global Door-to-Door Tracking</li>
+            <li>TruePrice Weight-Based Pricing</li>
+          </ul>
+        </div>
+        <div class="col-md-4 d-flex align-items-center mb-3">
+          <img class="me-3 w-25" src="./assets/images/Frame.png" alt="">
+          <h4>$648.74</h4>
+        </div>
+        <div class="col-md-12 d-flex align-items-center">
+          
+        </div>
+        <div class="col-12 text-center mt-3">
+          <button class="btn btn-main">Ship Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
         
 
   <footer style="background-image: url(assets/images/bg-footer.png);">

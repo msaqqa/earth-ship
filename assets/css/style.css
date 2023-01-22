@@ -191,6 +191,7 @@ a {
     border-radius: 7px;
     padding: 10px 20px 10px 20px;
     font-weight: 100;
+    box-shadow: none !important;
     transition: var(--transition)
 }
 
@@ -1796,3 +1797,41 @@ ul.breadcrumb li a:hover {
     }
 }
 /* end help page */
+/* start rates page */
+.rates .shipping {
+    width: 90%;
+    box-shadow: 2px 2px 23px rgb(165 165 165 / 16%);
+    border-radius: 5px;
+    min-height: 230px;
+    position: relative;
+    background: #fff;
+}
+.rates .shipping .shipping-head {
+    background-color: var(--red-color);
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.rates .shipping .DHL-link{
+    color: var(--red-color);;
+}
+.rates li::before{
+    content: "\f00c";
+    font-family: "Font Awesome 5 free";
+    font-weight: 700;
+    color: var(--red-color);
+    border: 1px solid var(--red-color);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    line-height: 12px;
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+@media (max-width: 767px){
+    .rates .shipping {
+        width: 100%;
+    }
+}
+/* end rates page */
