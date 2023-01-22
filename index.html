@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthship</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/images/crowdious_logo@2x.png"> -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <style>
+        * {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+    <script>
+        FontAwesomeConfig = { autoReplaceSvg: false }
+    </script>
+</head>
+
+<body>
+    <div class="mobile-menu">
+        <div class="menu-mobile">
+            <div class="mmenu">
+                <ul>
+                    <li>
+                        <a href="index.html"><img src="assets/images/logo.png" class="" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">ship now</a>
+                    </li>
+                    <li>
+                        <a href="#">track package</a>
+                    </li>
+                    <li>
+                        <a href="#">find drop off location</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/globe.png" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/shopping-cart.png" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/user.png" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/right-align.png" alt="" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-overlay"></div>
+    </div>
+    <div class="side-bar" id="side-bar">
+        <div class="row">
+            <div class="col-lg-10 col-10 text-center">
+                <img src="assets/images/logo-footer.png" class="logo-side-bar" alt="logo" />
+            </div>
+            <div class="col-lg-2 col-2">
+                <i class="fa-solid fa-xmark" onclick="hide_side_bar()"></i>
+            </div>
+            <div class="col-12">
+                <ul class="ul-first-side-bar mt-3">
+                    <li class="active">Home</li>
+                    <li>Ship Now</li>
+                    <li>Track Package</li>
+                    <li>Find Drop Off Location</li>
+                    <li>My Account</li>
+                    <li>My Shipments</li>
+                    <li>Address Book</li>
+                    <li>Payment Info</li>
+                </ul>
+                <hr>
+                <ul class="ul-first-side-bar mt-3">
+                    <li>Blog</li>
+                    <li>How It Works</li>
+                    <li>Can I Ship It?</li>
+                    <li>FAQ</li>
+                    <li>Contact Us</li>
+                    <li>Log Out</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav class="mt-3">
+        <div class="container">
+            <div class="row box">
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-nav">
+                    <ul class="nav  main_menu">
+                        <li class="nav-item d_media">
+                            <a href="categories.html" class="drop-home">ship now</a>
+                        </li>
+                        <li class="nav-item d_media">
+                            <a href="about.html" class="drop-home">track package</a>
+                        </li>
+                        <li class="nav-item d_media">
+                            <a href="#" class="drop-home">find drop off location</a>
+                        </li>
+                        <!-- <li class="nav-item  dropdown d_media">
+                            <a href="#" class="dropdown-toggle drop-home" onclick="myBtn()" data-toggle="dropdown"
+                                role="button">Learn
+                                <span class="caret"></span></a>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="faqs.html">FAQs</a>
+                                <a href="how-it-works.html">How it works</a>
+                            </div>
+
+                        </li> -->
+                    </ul>
+                    <button type="button" class="hamburger is-closed">
+                        <span class="hamb-top"></span>
+                        <span class="hamb-middle"></span>
+                        <span class="hamb-bottom"></span>
+                    </button>
+                </div>
+                <div class="col-lg-3 d_media">
+                    <div class="btns-auth">
+                        <img src="assets/images/globe.png" alt="" />
+                        <img src="assets/images/shopping-cart.png" alt="" />
+                        <img src="assets/images/user.png" alt="" />
+                        <img src="assets/images/right-align.png" onclick="show_side_bar()" alt="" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <section class="slider" style="background-image: url(assets/images/bg-main-section.png);">
+        <div class="container">
+            <div class="slides">
+                <div class="row m-0">
+                    <div class="col-lg-12 col-md-12 imge p-0">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner ">
+                                <div class="carousel-item active mt-2">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-12">
+                                            <h1 class="fw-bold main-heading">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit.Lorem ipsum dolor <span class="span-main-heading">in the
+                                                    Arab world</span></h1>
+                                            <div class="c-line-center c-theme-bg first_item"></div>
+                                            <h6>Lorem ipsum dolor sit amet, consectetur</h6>
+                                            <button class="btn btn-ship-now">Ship Now</button>
+                                        </div>
+                                        <div class="col-lg-7 col-12">
+                                            <img src="assets/images/Slider_1.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item  mt-2">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-12">
+                                            <h1 class="fw-bold main-heading">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing elit.Lorem ipsum dolor <span class="span-main-heading">in the
+                                                    Arab world</span></h1>
+                                            <div class="c-line-center c-theme-bg first_item"></div>
+                                            <h6>Lorem ipsum dolor sit amet, consectetur</h6>
+                                            <button class="btn btn-ship-now">Ship Now</button>
+                                        </div>
+                                        <div class="col-lg-7 col-12">
+                                            <img src="assets/images/Slider_1.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- <button class="carousel-control-prev justify-content" type=""
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <i class="carousel-control-prev-icon fa fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="carousel-control-next justify-content" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <i class="carousel-control-next-icon fa fa-angle-right" aria-hidden="false"></i>
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-calculator">
+        <div class="container">
+            <div class="w-lg-75 text-center mx-md-auto md-5">
+                <h1 class="h1 lh-sm">Find the Best Shipping Rates</h1>
+            </div>
+            <img src="assets/images/element-2.png" class="img-1" alt="img" />
+            <div class="shipping-calculator mx-md-auto md-5" id="shipping-calculator">
+                <form action="" class="w-100" method="post">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5>Shipment Address</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="us_zip_code">From United States Zip Code :</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text input-group-calculator" id="us-zip-code">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </span>
+                                <input type="text" id="us_zip_code" name="us_zip_code" class="form-control"
+                                    placeholder="US Zip Code" aria-label="US Zip Code" aria-describedby="us-zip-code">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="" selected_country>To :</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text input-group-calculator" id="basic-addon1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </span>
+                                <select autocomplete="do-not-autofill" class="form-select" id="calculator-country"
+                                    name="selected_country" aria-required="true">
+                                    <option value="">Destination Country</option>
+                                    <option value="AL">Albania</option>
+                                    <option value="DZ">Algeria</option>
+                                    <option value="AS">American Samoa</option>
+                                    <option value="AD">Andorra</option>
+                                    <option value="AO">Angola</option>
+                                    <option value="AI">Anguilla</option>
+                                    <option value="AR">Argentina</option>
+                                    <option value="AM">Armenia</option>
+                                    <option value="AW">Aruba</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="AT">Austria</option>
+                                    <option value="AZ">Azerbaijan</option>
+                                    <option value="BS">Bahamas</option>
+                                    <option value="BH">Bahrain</option>
+                                    <option value="BD">Bangladesh</option>
+                                    <option value="BB">Barbados</option>
+                                    <option value="BE">Belgium</option>
+                                    <option value="BZ">Belize</option>
+                                    <option value="BJ">Benin</option>
+                                    <option value="BW">Botswana</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="VG">British Virgin Islands</option>
+                                    <option value="BG">Bulgaria</option>
+                                    <option value="BF">Burkina Faso</option>
+                                    <option value="BI">Burundi</option>
+                                    <option value="KH">Cambodia</option>
+                                    <option value="CM">Cameroon</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="CV">Cape Verde</option>
+                                    <option value="CF">Central African Republic</option>
+                                    <option value="CL">Chile</option>
+                                    <option value="CO">Colombia</option>
+                                    <option value="KM">Comoros</option>
+                                    <option value="CK">Cook Islands</option>
+                                    <option value="CR">Costa Rica</option>
+                                    <option value="HR">Croatia</option>
+                                    <option value="CW">Curacao</option>
+                                    <option value="CY">Cyprus</option>
+                                    <option value="CZ">Czech Republic</option>
+                                    <option value="DK">Denmark</option>
+                                    <option value="DJ">Djibouti</option>
+                                    <option value="DM">Dominica</option>
+                                    <option value="DO">Dominican Republic</option>
+                                    <option value="EC">Ecuador</option>
+                                    <option value="EG">Egypt</option>
+                                    <option value="SV">El Salvador</option>
+                                    <option value="ER">Eritrea</option>
+                                    <option value="EE">Estonia</option>
+                                    <option value="ET">Ethiopia</option>
+                                    <option value="FO">Faroe Islands</option>
+                                    <option value="FJ">Fiji</option>
+                                    <option value="FI">Finland</option>
+                                    <option value="FR">France</option>
+                                    <option value="GF">French Guiana</option>
+                                    <option value="GA">Gabon</option>
+                                    <option value="GM">Gambia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="GH">Ghana</option>
+                                    <option value="GI">Gibraltar</option>
+                                    <option value="GR">Greece</option>
+                                    <option value="GL">Greenland</option>
+                                    <option value="GD">Grenada</option>
+                                    <option value="GP">Guadeloupe</option>
+                                    <option value="GT">Guatemala</option>
+                                    <option value="GY">Guyana</option>
+                                    <option value="HT">Haiti</option>
+                                    <option value="HN">Honduras</option>
+                                    <option value="HK">Hong Kong</option>
+                                    <option value="HU">Hungary</option>
+                                    <option value="IS">Iceland</option>
+                                    <option value="IN">India</option>
+                                    <option value="ID">Indonesia</option>
+                                    <option value="IQ">Iraq</option>
+                                    <option value="IE">Ireland</option>
+                                    <option value="IL">Israel</option>
+                                    <option value="IT">Italy</option>
+                                    <option value="JM">Jamaica</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="JO">Jordan</option>
+                                    <option value="KZ">Kazakhstan</option>
+                                    <option value="KI">Kiribati</option>
+                                    <option value="KW">Kuwait</option>
+                                    <option value="KG">Kyrgyzstan</option>
+                                    <option value="LV">Latvia</option>
+                                    <option value="LB">Lebanon</option>
+                                    <option value="LS">Lesotho</option>
+                                    <option value="LR">Liberia</option>
+                                    <option value="LI">Liechtenstein</option>
+                                    <option value="LT">Lithuania</option>
+                                    <option value="LU">Luxembourg</option>
+                                    <option value="MG">Madagascar</option>
+                                    <option value="MW">Malawi</option>
+                                    <option value="MY">Malaysia</option>
+                                    <option value="ML">Mali</option>
+                                    <option value="MT">Malta</option>
+                                    <option value="MQ">Martinique</option>
+                                    <option value="MR">Mauritania</option>
+                                    <option value="MU">Mauritius</option>
+                                    <option value="YT">Mayotte</option>
+                                    <option value="MX">Mexico</option>
+                                    <option value="MD">Moldova</option>
+                                    <option value="ME">Montenegro</option>
+                                    <option value="MS">Montserrat</option>
+                                    <option value="MA">Morocco</option>
+                                    <option value="MZ">Mozambique</option>
+                                    <option value="NA">Namibia</option>
+                                    <option value="NP">Nepal</option>
+                                    <option value="NL">Netherlands</option>
+                                    <option value="NC">New Caledonia</option>
+                                    <option value="NZ">New Zealand</option>
+                                    <option value="NI">Nicaragua</option>
+                                    <option value="NE">Niger</option>
+                                    <option value="NG">Nigeria</option>
+                                    <option value="NO">Norway</option>
+                                    <option value="OM">Oman</option>
+                                    <option value="PK">Pakistan</option>
+                                    <option value="PA">Panama</option>
+                                    <option value="PG">Papua New Guinea</option>
+                                    <option value="PY">Paraguay</option>
+                                    <option value="PE">Peru</option>
+                                    <option value="PH">Philippines</option>
+                                    <option value="PL">Poland</option>
+                                    <option value="PT">Portugal</option>
+                                    <option value="QA">Qatar</option>
+                                    <option value="RO">Romania</option>
+                                    <option value="RW">Rwanda</option>
+                                    <option value="WS">Samoa</option>
+                                    <option value="SA">Saudi Arabia</option>
+                                    <option value="SN">Senegal</option>
+                                    <option value="SC">Seychelles</option>
+                                    <option value="SL">Sierra Leone</option>
+                                    <option value="SG">Singapore</option>
+                                    <option value="SI">Slovenia</option>
+                                    <option value="SB">Solomon Islands</option>
+                                    <option value="ZA">South Africa</option>
+                                    <option value="ES">Spain</option>
+                                    <option value="LK">Sri Lanka</option>
+                                    <option value="XY">St. Barthelemy</option>
+                                    <option value="SR">Suriname</option>
+                                    <option value="SE">Sweden</option>
+                                    <option value="CH">Switzerland</option>
+                                    <option value="TW">Taiwan</option>
+                                    <option value="TZ">Tanzania</option>
+                                    <option value="TH">Thailand</option>
+                                    <option value="TG">Togo</option>
+                                    <option value="TO">Tonga</option>
+                                    <option value="TN">Tunisia</option>
+                                    <option value="TR">Turkey</option>
+                                    <option value="TV">Tuvalu</option>
+                                    <option value="UG">Uganda</option>
+                                    <option value="AE">United Arab Emirates</option>
+                                    <option value="US">United States</option>
+                                    <option value="UY">Uruguay</option>
+                                    <option value="UZ">Uzbekistan</option>
+                                    <option value="VU">Vanuatu</option>
+                                    <option value="VN">Vietnam</option>
+                                    <option value="ZM">Zambia</option>
+                                    <option value="ZW">Zimbabwe</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="">Package Weight :</label>
+                            <div class="input-group ">
+                                <span class="input-group-text input-group-calculator" id="basic-addon1">
+                                    <i class="fas fa-weight-hanging"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+
+                            </div>
+                            <span class="weight-helper-txt">Enter a value up to 70 lbs</span>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="text-calculator">
+                                If your package's length + width + height is greater than 60 inches,
+                                <span class="fw-bold" style="color: #DF3A27; cursor: pointer;"
+                                    onclick="show_block_dimensions()">
+                                    click here
+                                </span> to provide the dimensions
+                            </p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-ship-now">Ship Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="text-end">
+                <img src="assets/images/element-2.png" class="img-2" alt="img" />
+            </div>
+            <div class="block-dimensions">
+                <div class="row">
+                    <div class="col-md-7 col-12">
+                        <h3 class="fw-bold">Dimensions</h3>
+                    </div>
+                    <div class="col-md-5 col-12 text-end">
+                        <button class="btn btn-dimensions" onclick="hide_block_dimensions()">OK</button>
+                    </div>
+                    <div class="col-12 my-2">
+                        <label for="us_zip_code">Length:</label>
+                        <div class="input-group my-2">
+                            <span class="input-group-text input-group-calculator" id="us-zip-code">
+                                <img src="assets/images/scale.png">
+                            </span>
+                            <input type="text" id="us_zip_code" name="us_zip_code" class="form-control"
+                                placeholder="Package length" aria-label="Package length" aria-describedby="us-zip-code">
+                        </div>
+                    </div>
+                    <div class="col-12 my-2">
+                        <label for="us_zip_code">Width:</label>
+                        <div class="input-group my-2">
+                            <span class="input-group-text input-group-calculator" id="us-zip-code">
+                                <img src="assets/images/resize.png">
+                            </span>
+                            <input type="text" id="us_zip_code" name="us_zip_code" class="form-control"
+                                placeholder="Package width" aria-label="Package width" aria-describedby="us-zip-code">
+                        </div>
+                    </div>
+                    <div class="col-12 my-2">
+                        <label for="us_zip_code">Height:</label>
+                        <div class="input-group my-2">
+                            <span class="input-group-text input-group-calculator" id="us-zip-code">
+                                <img src="assets/images/resize (1).png">
+                            </span>
+                            <input type="text" id="us_zip_code" name="us_zip_code" class="form-control"
+                                placeholder="Package height" aria-label="Package height" aria-describedby="us-zip-code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container how-it-work">
+        <h2 class="text-center fw-bold">How It Works</h2>
+        <h6 class="text-center">Lorem ipsum dolor sit amet, consectetur</h6>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="block-how-it-work">
+                    <h1>1</h1>
+                    <div class="text-center">
+                        <div class="img-how-it-work">
+                            <img src="assets/images/first.png" alt="img" />
+
+                        </div>
+                        <h4>Give us your shipment details and get an instant, accurate shipping rate.</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="block-how-it-work">
+                    <h1>2</h1>
+                    <div class="text-center">
+                        <div class="img-how-it-work">
+                            <img src="assets/images/second.png" alt="img" />
+                        </div>
+                        <h4>Print your shipping label</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="block-how-it-work">
+                    <h1>3</h1>
+                    <div class="text-center">
+                        <div class="img-how-it-work">
+                            <img src="assets/images/third.png" alt="img" />
+                        </div>
+                        <h4>Bring your box to a local drop-off point, and we’ll do the rest!</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button data-aos="fade-up" data-toggle="modal" data-target="#largeModal" class="btn btn-ship-now">How
+                    itworks</button>
+            </div>
+            <!-- large modal -->
+            <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal"
+                aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content modal-video">
+                        <div class="modal-header text-center" style="border-bottom: 0px;">
+                            <div class="row" style="width: 100%;">
+                                <div class="col-12 text-center">
+                                    <h4 class="modal-title text-center fw-bold" id="myModalLabel">How PackageHopper Works</h4>
+                                </div>
+                            </div>
+                            <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-2 col-2">
+                                    <img src="assets/images/laptop.png" width="100%" alt=""/>
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <h6>Enter your shipment details, including size, weight, and contents.</h6>
+                                </div>
+                                <div class="col-md-2 col-2">
+                                    <img src="assets/images/Frame.png" width="100%" alt="" />
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <h6>Choose a shipping option with TruePrice™ upfront rates calculated on package weight only*.</h6>
+                                </div>
+                                <div class="col-md-2 col-2">
+                                    <img src="assets/images/Frame2.png" width="100%" alt="" />
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <h6>Enter your shipment details, including size, weight, and contents.</h6>
+                                </div>
+                                <div class="col-md-2 col-2">
+                                    <img src="assets/images/Frame3.png" width="100%" alt="" />
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <h6>Enter your shipment details, including size, weight, and contents.</h6>
+                                    <ul class="ul-how-it-work">
+                                        <li>Verify the contents are correct, undamaged, and can be exported to the destination country .</li>
+                                        <li>Ensure it is packaged and labeled properly for international shipment.</li>
+                                        <li>Complete all necessary export documentation .</li>
+                                        <li>Ship it via your selected international courier .</li>
+                                        <li>Give you door-to-door tracking information .</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 col-2">
+                                    <img src="assets/images/Frame4.png" width="100%" alt="" />
+                                </div>
+                                <div class="col-md-10 col-10 pt-3">
+                                    <h6><span class="fw-bold">Relax.</span>Your package is in good hands and will be delivered to its destination safely.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="why-ship">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">why ship with Earthship?</h2>
+            <div class="row m-0">
+                <div class="col-lg-6 col-12">
+                    <h2 class="fw-bold">Why Ship with PackageHopper?</h2>
+                    <h5 class="heading-fife-why-ship">PackageHopper is powered by MyUS, the leader in global e-commerce
+                        shipping since 1997. MyUS has shipped over 27 million
+                        packages for customers just like you, and offers unprecedented service and benefits.</h5>
+                    <ul class="ul-why-ship">
+                        <li>TruePrice™ Upfront Pricing</li>
+                        <h5 class="heading-fife-why-ship">Our low rates are based on package weight only**, unlike our
+                            competitors' unpredictable calculations that use package
+                            size AND weight. What you see is what you pay, with no surprises!</h5>
+                        <li>Top-Rated Couriers</li>
+                        <h5 class="heading-fife-why-ship">Thanks to our long-term partnerships with global express
+                            carriers like DHL, you get the best rates, a variety of service
+                            options, and door-to-door tracking on every shipment.</h5>
+                        <div class="text-end">
+                            <div class="row">
+                                <div class="col-lg-3 col-6">
+                                    <img src="assets/images/first-why-ship.png" alt="img" />
+                                </div>
+                                <div class="col-lg-3 col-6">
+                                    <img src="assets/images/second-why-ship.png" alt="img" />
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <img src="assets/images/third-why-ship.png" alt="img" />
+                                </div>
+                                <div class="col-lg-3 col-6">
+                                    <img src="assets/images/fourth-why-ship.png" alt="img" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <li>Experienced & Dependable Team</li>
+                        <h5 class="heading-fife-why-ship">We’re backed by MyUS, which has provided millions of customers
+                            worldwide with reliable, affordable shipping and
+                            top-notch customer care, so you can be confident your package will arrive safely.</h5>
+                        <button class="btn btn-ship-now">Ship Now</button>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <img src="assets/images/element.png" class="elements" alt="" />
+                    <div class="bg-images-why-ship">
+                        <img src="assets/images/img-why-ship.png" width="85%" alt="" />
+                    </div>
+                    <div class="text-end second-element-why-ship">
+                        <img src="assets/images/element.png" class="elements" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container clients my-5">
+        <h2>What our clients say about us.</h2>
+        <h6>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+            velit
+            mollit. Exercitation veniam consequat sunt nostrud amet.</h6>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="what-is">
+                    <div class="">
+                        <div class="container">
+                            <div id="whatis" class="owl-carousel owl-theme">
+
+                                <div class="item-client">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <img src="assets/images/client-img.png" alt="img-client" />
+                                    <h2>James Pattinson</h2>
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#C4C4C4;"></i>
+                                    </div>
+                                    <h5>“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+                                        tortor donec ipsum consequat semper
+                                        consequat
+                                        adipiscing ultrices.”</h5>
+                                </div>
+                                <div class="item-client">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <img src="assets/images/client-img-2.png" alt="img-client" />
+                                    <h2>Greg Stuart</h2>
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                    </div>
+                                    <h5>“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+                                        tortor donec ipsum consequat semper
+                                        consequat
+                                        adipiscing ultrices.”</h5>
+                                </div>
+                                <div class="item-client">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <img src="assets/images/client-img-3.png" alt="img-client" />
+                                    <h2>Trevor Mitchell</h2>
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#C4C4C4;"></i>
+                                        <i class="fa-solid fa-star" style="color:#C4C4C4;"></i>
+                                    </div>
+                                    <h5>“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+                                        tortor donec ipsum consequat semper
+                                        consequat
+                                        adipiscing ultrices.”</h5>
+                                </div>
+                                <div class="item-client">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <img src="assets/images/client-img.png" alt="img-client" />
+                                    <h2>James Pattinson</h2>
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#C4C4C4;"></i>
+                                    </div>
+                                    <h5>“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+                                        tortor donec ipsum consequat semper
+                                        consequat
+                                        adipiscing ultrices.”</h5>
+                                </div>
+                                <div class="item-client">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <img src="assets/images/client-img-2.png" alt="img-client" />
+                                    <h2>Greg Stuart</h2>
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                    </div>
+                                    <h5>“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+                                        tortor donec ipsum consequat semper
+                                        consequat
+                                        adipiscing ultrices.”</h5>
+                                </div>
+                                <div class="item-client">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <img src="assets/images/client-img-3.png" alt="img-client" />
+                                    <h2>Trevor Mitchell</h2>
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#C4C4C4;"></i>
+                                        <i class="fa-solid fa-star" style="color:#C4C4C4;"></i>
+                                    </div>
+                                    <h5>“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+                                        tortor donec ipsum consequat semper
+                                        consequat
+                                        adipiscing ultrices.”</h5>
+                                </div>
+                                <div class="item-client">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <img src="assets/images/client-img.png" alt="img-client" />
+                                    <h2>James Pattinson</h2>
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#C4C4C4;"></i>
+                                    </div>
+                                    <h5>“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+                                        tortor donec ipsum consequat semper
+                                        consequat
+                                        adipiscing ultrices.”</h5>
+                                </div>
+                                <div class="item-client">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <img src="assets/images/client-img-2.png" alt="img-client" />
+                                    <h2>Greg Stuart</h2>
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                    </div>
+                                    <h5>“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+                                        tortor donec ipsum consequat semper
+                                        consequat
+                                        adipiscing ultrices.”</h5>
+                                </div>
+                                <div class="item-client">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <img src="assets/images/client-img-3.png" alt="img-client" />
+                                    <h2>Trevor Mitchell</h2>
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#DF3A27;"></i>
+                                        <i class="fa-solid fa-star" style="color:#C4C4C4;"></i>
+                                        <i class="fa-solid fa-star" style="color:#C4C4C4;"></i>
+                                    </div>
+                                    <h5>“Lobortis leo pretium facilisis amet nisl at nec. Scelerisque risus
+                                        tortor donec ipsum consequat semper
+                                        consequat
+                                        adipiscing ultrices.”</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer style="background-image: url(assets/images/bg-footer.png);">
+        <div class="rgba">
+            <div class="container pb-5">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-12 col-12">
+                        <img src="assets/images/logo-footer.png" height="50px" alt="logo" />
+                        <h6>“Vestibulum, cum nam non amet consectetur morbi aenean condimentum eget. Ultricies integer
+                            nunc neque accumsan laoreet.
+                            Viverra nibh ultrices.”</h6>
+                    </div>
+                    <div class="col-lg-2 col-sm-12 col-6">
+                        <ul>
+                            <li class="text-white">Our Company</li>
+                            <li>About Us</li>
+                            <li>Blog</li>
+                            <li>Your Privacy Rights</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-sm-12 col-6">
+                        <ul>
+                            <li class="text-white">Customer Service</li>
+                            <li>Track Package</li>
+                            <li>Find Drop Off Location</li>
+                            <li>Can I Ship It?</li>
+                            <li>FAQ</li>
+                            <li>Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 col-12">
+                        <ul>
+                            <li class="text-white">Follow us on social:</li>
+                            <li>
+                                <ul class="ul-icons">
+                                    <li><i class="fa-brands fa-twitter"></i></li>
+                                    <li><i class="fa-brands fa-linkedin"></i></li>
+                                    <li><i class="fa-brands fa-instagram"></i></li>
+                                    <li><i class="fa-brands fa-youtube"></i></li>
+                                    <li><i class="fa-brands fa-facebook"></i></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="ul-imgs">
+                                    <li><img src="assets/images/paypal.png" alt="" /></li>
+                                    <li><img src="assets/images/visa.png" alt="" /></li>
+                                    <li><img src="assets/images/discover.png" alt="" /></li>
+                                    <li><img src="assets/images/Mastercard 1.png" alt="" /></li>
+                                    <li><img src="assets/images/apple-pay.png" alt="" /></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="col-lg-5 col-sm-12 col-12 text-end d_media">
+                        <a href="#" class="scrollup"><i class="fa-solid fa-angle-up"></i></a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row end-row-footer" style="margin: 0px;">
+                <div class="col-lg-6 col-sm-12" style="margin: auto;">
+                    <ul class="ul-links-footer">
+                        <li>&copy;2022 Stake. All rights reserved</li>
+                        <li>XML Sitemap</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/popper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <Script src="https://code.jquery.com/jquery-3.6.0.min.js"></Script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js""></script>
+    <script src=" assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
+
+    <script>
+        $(".hamburger").click(function () {
+            $("body,html").addClass('menu-toggle');
+            $(".hamburger").addClass('active');
+        });
+        $(".m-overlay").click(function () {
+            $("body,html").removeClass('menu-toggle');
+            $(".hamburger").removeClass('active');
+        });
+    </script>
+
+
+    <script>
+        function myBtn() {
+            myFunction()
+        }
+
+        function myFunction() {
+            $('.dropdown-content').toggle();
+            $('.dropdown-content').toggleClass('show');
+        }
+
+
+        window.onclick = function (event) {
+
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function show_side_bar() {
+            $("#side-bar").show();
+        }
+        function hide_side_bar() {
+            $("#side-bar").hide();
+        }
+    </script>
+    <script>
+        function show_block_dimensions() {
+            $(".block-dimensions").show();
+
+        }
+        function hide_block_dimensions() {
+            $(".block-dimensions").hide();
+
+        }
+    </script>
+</body>
+
+</html>
