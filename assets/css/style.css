@@ -1811,6 +1811,8 @@ ul.breadcrumb li a:hover {
     color: white;
     padding: 1rem;
     font-size: 1.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
 .rates .shipping .DHL-link{
     color: var(--red-color);
