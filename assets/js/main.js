@@ -502,18 +502,19 @@ $("#clients").owlCarousel({
 
 // Get all buttons with class="btn" inside the container
 let shuffles = document.querySelectorAll(".shuffle");
+console.log(shuffles);
 // Loop through the buttons and add the active class to the current/clicked button
 for (let i = 0; i < shuffles.length; i++) {
   shuffles[i].addEventListener("click", function () {
-    let current = document.getElementsByClassName("shuffle active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    [...shuffles].map((item) => item.classList.remove("active"));
+    this.classList.add("active");
+
     let att = this.getAttribute("data-bs-target");
     let el = document.querySelector(att);
     let shows = document.querySelectorAll(".collapse");
     if (!el.classList.contains("show")) {
       [...shows].map((item) => item.classList.remove("show"));
-      el.className += " show";
+      el.classList.add("collapsing");
     }
   });
 }

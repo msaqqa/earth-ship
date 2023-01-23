@@ -185,36 +185,36 @@
                   <option value="">Palestine</option>
                 </select>
               </div>
-              </div>
-              <div class="col-md-4">
-                <label for="">Package Weight</label>
-                <div class="input-group ">
-                  <span class="input-group-text input-group-calculator" id="basic-addon1">
-                    <i class="fas fa-weight-hanging"></i>
-                  </span>
-                  <input type="text" class="form-control" placeholder="Weight " aria-label="Weight "
-                    aria-describedby="basic-addon1">
-                </div>
-                <span class="weight-helper-txt">Enter a value up to 70 lbs</span>
-              </div>
-              <div class="col-md-12">
-                <p class="text-calculator">
-                  If your package's length + width + height is greater than 60 inches,
-                  <span class="fw-bold" style="color: #DF3A27; cursor: pointer;"
-                    onclick="show_block_dimensions()">
-                    click here
-                  </span> to provide the dimensions
-                </p>
-              </div>
-              <div class="col-12 text-center">
-                <button class="btn btn-ship-now">Check My Rates</button>
-              </div>
             </div>
-          </form>
-        </div>
-        <div class="text-end">
-            <img src="assets/images/element-2.png" class="img-2" alt="img" />
-        </div>
+            <div class="col-md-4">
+              <label for="">Package Weight</label>
+              <div class="input-group">
+                <span class="input-group-text input-group-calculator" id="basic-addon1">
+                  <i class="fas fa-weight-hanging"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Weight " aria-label="Weight "
+                  aria-describedby="basic-addon1">
+              </div>
+              <span class="weight-helper-txt">Enter a value up to 70 lbs</span>
+            </div>
+            <div class="col-md-12">
+              <p class="text-calculator">
+                If your package's length + width + height is greater than 60 inches,
+                <span class="fw-bold" style="color: #DF3A27; cursor: pointer;"
+                  onclick="show_block_dimensions()">
+                  click here
+                </span> to provide the dimensions
+              </p>
+            </div>
+            <div class="col-12 text-center">
+              <button class="btn btn-main" type="button">Check My Rates</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="text-end">
+        <img src="assets/images/element-2.png" class="img-2" alt="img" />
+      </div>
       <div class="block-dimensions">
         <div class="row">
           <div class="col-md-7 col-12">
@@ -257,6 +257,7 @@
       </div>
     </div>
   </section>
+
   <section class="py-5 text-center">
     <div class="container">
       <div class="mb-5">
@@ -271,9 +272,8 @@
         With PackageHopper, you share all of your shipment information, pack your items, and pay online—all from the comfort of your own home. Then, just drop off your shipment at a local location whenever it is convenient for you! By conveniently prepping your items at home, and taking them to the local drop-off, we can offer cheaper prices by cutting down on administrative costs.
       </p>
     </div>
-</section>
-        
-
+  </section>
+  
   <footer style="background-image: url(assets/images/bg-footer.png);">
     <div class="rgba">
       <div class="container pb-5">
@@ -356,6 +356,14 @@
   <script src="assets/js/all.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    function show_block_dimensions() {
+      $(".block-dimensions").show();
+    }
+    function hide_block_dimensions() {
+      $(".block-dimensions").hide();
+    }
+</script>
 </body>
 
 </html>

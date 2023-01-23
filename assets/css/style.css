@@ -192,10 +192,10 @@ a {
     padding: 10px 20px 10px 20px;
     font-weight: 100;
     box-shadow: none !important;
-    transition: var(--transition)
+    transition: all var(--transition)
 }
 
-.btn-main:hover {
+.btn-main:hover, .btn-main.active {
     background-color: var(--pink-color);
     color: #DF3A27;
     border-radius: 7px;
@@ -1773,7 +1773,7 @@ ul.breadcrumb li a:hover {
     border-top-color: var(--red-color);
 }
 .help-accordion .collapse {
-    transform: var(--transition);
+    transition: all var(--transition) linear;
 }
 .help-accordion .accordion .accordion-button {
     background-color: transparent;
@@ -1813,9 +1813,10 @@ ul.breadcrumb li a:hover {
     font-size: 1.5rem;
 }
 .rates .shipping .DHL-link{
-    color: var(--red-color);;
+    color: var(--red-color);
+    cursor: pointer;
 }
-.rates li::before{
+.rates .dhl-list li::before{
     content: "\f00c";
     font-family: "Font Awesome 5 free";
     font-weight: 700;
@@ -1833,5 +1834,29 @@ ul.breadcrumb li a:hover {
     .rates .shipping {
         width: 100%;
     }
+}
+.block-dhl-express {
+    background-color: #F3F3F3;
+    width: 80%;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid var(--red-color);
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 100000;
+    display: none;
+    position: relative;
+}
+.block-dhl-express .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+.block-dhl-express .dhl-img {
+    width: 100px;
 }
 /* end rates page */
