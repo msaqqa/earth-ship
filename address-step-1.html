@@ -162,42 +162,99 @@
       </div>
       <div class="row">
         <div class="col-md-6 p-md-5 p-3">
-          <h4 class="fs-2 fw-bold mb-3">Where Is This Shipping From?</h4>
+          <h4 class="fs-2 fw-bold mb-2">Where Is This Shipping From?</h4>
           <p class="text-muted lh-lg mb-4">
             This is where your package will be returned to, should there be any issues with your shipment.
             Your package should be dropped off at an approved location near this address.
           </p>
-          <form>
-            <label for="#address">Choose a saved Address</label>
-            <select class="form-select address-select" id="address" name="address">
-              <option value="">Yousef</option>
-              <option value="">Yousef</option>
-              <option value="">Yousef</option>
-              <option value="">Yousef</option>
-              <option value="">Yousef</option>
-              <option value="">Yousef</option>
-            </select>
-            <div class="address-box">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="fw-bold mb-0">Yousef</h5>
-                <a class="color-main" href="#">Edit Address</a>
-              </div>
-              <ul class="text-muted list-unstyled">
-                <li class="mb-2">Mohamed ABU YOUSEF</li>
-                <li class="mb-2">Gaza Strip, Al Rimal St</li>
-                <li class="mb-2">Gaza, AR, 85001</li>
-                <li class="mb-2">United States</li>
-                <li class="mb-2">(+1) 8003426555</li>
-                <li>yousuf3yousuf3@gmail.com</li>
-              </ul>
-            </div>
-            <div class="text-center text-md-start"><button class="btn btn-main mb-5" type="button">Add a New Address</button></div>
-          </form>
-        </div>
+					<label class="form-label" for="#address-select">Choose a saved Address</label>
+					<select onchange="toggleForm()" class="form-select address-select" id="address-select" name="address-select">
+						<option value="enter-new-address">Enter a New Address</option>
+						<option value="Yousef">Yousef</option>
+					</select>
+					<!-- start shipping form -->
+					<div class="block-shipping-form">
+						<form>
+							<div class="mb-2">
+								<label for="AddressNickname" class="form-label">Address Nickname</label>
+								<input type="text" class="form-control" id="AddressNickname" placeholder="Address Nickname">
+							</div>
+							<div class="mb-2">
+								<label for="FullName" class="form-label">Full Name</label>
+								<input type="text" class="form-control" id="FullName" placeholder="Full Name">
+							</div>
+							<div class="mb-2">
+								<label for="Email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="Email" placeholder="Email">
+							</div>
+							<div class="mb-2">
+								<label for="Telephone" class="form-label">Telephone</label>
+								<input type="phone" class="form-control" id="Telephone" placeholder="Telephone">
+							</div>
+							<div class="mb-2">
+								<label for="Organization" class="form-label">Organization (optional)</label>
+								<input type="text" class="form-control" id="Organization" placeholder="Organization">
+							</div>
+							<div class="form-check mb-2">
+								<input class="form-check-input" type="checkbox" id="billing">
+								<label class="form-check-label" for="gridCheck">This is my billing billing</label>
+							</div>
+							<div class="form-check mb-2">
+								<input checked class="form-check-input" type="checkbox" id="save">
+								<label class="form-check-label" for="save">Save this address in my Address Book</label>
+							</div>
+							<div class="mb-2">
+								<label for="Address-1" class="form-label">Address 1</label>
+								<input type="text" class="form-control" id="Address-1" placeholder="Address 1">
+							</div>
+							<div class="mb-2">
+								<label for="Address-2" class="form-label">Address 2 (Optional)</label>
+								<input type="text" class="form-control" id="Address-2" placeholder="Address 2">
+							</div>
+							<div class="row">
+								<div class="col">
+									<label for="inputState" class="form-label">State/Province</label>
+									<select id="inputState" class="form-select">
+										<option selected>Choose...</option>
+										<option>State</option>
+									</select>
+								</div>
+								<div class="col">
+									<label for="City" class="form-label">City</label>
+									<input type="text" class="form-control" id="City" placeholder="City">
+								</div>
+								<div class="col">
+									<label for="ZipCode" class="form-label">Postal Code</label>
+									<input type="text" class="form-control" id="ZipCode" placeholder="00000">
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- start shipping card -->
+					<div class="block-shipping-card">
+						<div class="address-box">
+							<div class="d-flex justify-content-between align-items-center mb-2">
+								<h5 class="fw-bold mb-0">Yousef</h5>
+								<a class="color-main" href="#">Edit Address</a>
+							</div>
+							<ul class="text-muted list-unstyled">
+								<li class="mb-2">Mohamed ABU YOUSEF</li>
+								<li class="mb-2">Gaza Strip, Al Rimal St</li>
+								<li class="mb-2">Gaza, AR, 85001</li>
+								<li class="mb-2">United States</li>
+								<li class="mb-2">(+1) 8003426555</li>
+								<li>yousuf3yousuf3@gmail.com</li>
+							</ul>
+						</div>
+						<div class="text-center text-md-start">
+							<button onclick="show_block_shipping_form()" class="btn btn-main mb-5" type="button">Add a New Address</button>
+						</div>
+					</div>
+				</div>
         <div class="col-md-6 p-md-5 p-3 border-start line">
-          <h4 class="fs-2 fw-bold mb-3">Where Is This Going To?</h4>
+          <h4 class="fs-2 fw-bold mb-2">Where Is This Going To?</h4>
           <form>
-            <label for="#address">Choose a saved Address</label>
+            <label class="form-label" for="#address">Choose a saved Address</label>
             <select class="form-select address-select" id="address" name="address">
               <option value="">Yousef</option>
               <option value="">Yousef</option>
@@ -222,13 +279,15 @@
             </div>
             <div class="text-center text-md-start"><button class="btn btn-main" type="button">Add a New Address</button></div>
           </form>
-          </div>
+        </div>
+
         <div class="position-relative px-md-5 px-3 mt-4">
           <a class="btn btn-main btn-back" href="#">Back</a>
           <a class="btn btn-main btn-continue" href="#">Continue</a>
         </div>
       </div>
-    </div>
+
+		</div>
   </section>
 
 
@@ -315,11 +374,24 @@
 	<script src="assets/js/main.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
-		function show_block_dimensions() {
-			$(".block-dhl-express").show();
+		let select = document.getElementById("address-select")
+		function show_block_shipping_form() {
+			let selectValue = select.options[select.selectedIndex].value;
+			$(".block-shipping-card").hide();
+			$(".block-shipping-form").show();
+			selectValue = "enter-new-address";
 		}
-		function hide_block_dimensions() {
-			$(".block-dhl-express").hide();
+		function hide_block_shipping_form() {
+			$(".block-shipping-form").hide();
+			$(".block-shipping-card").show();
+		}
+		function toggleForm() {
+			let selectValue = select.options[select.selectedIndex].value;
+			if(selectValue === "enter-new-address"){
+			show_block_shipping_form();
+			}else{
+				hide_block_shipping_form();
+			}
 		}
   </script>
 

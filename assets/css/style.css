@@ -1897,25 +1897,28 @@ ul.breadcrumb li a:hover {
 .address .steps .active {
     background-color: var(--red-color);
 }
-label {
-    padding: 0.5rem 1rem;
-}
 .address-select{
     background-color: var(--bg-color);
     border-radius: 1em;
     padding: 0.5rem 1rem;
     border-color: #dee2e6;
+    margin-bottom: 2rem;
 }
-.address-select:focus{
+.address .form-control:focus,
+.address .form-select:focus,
+.address .form-check-input {
     border-color: var(--red-color);
     box-shadow: none;
+}
+.address .form-check-input:checked {
+    background-color: var(--red-color);
 }
 .address-box {
     background-color: var(--bg-color);
     padding: 1.5rem;
     border:  1px solid var(--red-color);
     border-radius: 10px;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 .address-box .edit-link{
     color: var(--red-color);
@@ -1938,5 +1941,11 @@ label {
     .line {
         border: none !important;
     }
+}
+.block-shipping-form{
+    display: none
+}
+.block-shipping-card{
+    display: block;
 }
 /* end address */
