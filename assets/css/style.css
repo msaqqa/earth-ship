@@ -6,6 +6,7 @@
     --sky-color: #5FC7E8;
     --transition: 0.3s;
     --pink-color: #F1A8A0;
+    --bg-color: #FAFAFA;
 }
 
 /* classes general */
@@ -186,7 +187,7 @@ a {
 }
 
 .btn-main {
-    background-color: #DF3A27;
+    background-color: var(--red-color);
     color: #fff;
     border-radius: 7px;
     padding: 10px 20px 10px 20px;
@@ -197,11 +198,15 @@ a {
 
 .btn-main:hover, .btn-main.active {
     background-color: var(--pink-color);
-    color: #DF3A27;
+    color: var(--red-color);
     border-radius: 7px;
     padding: 10px 20px 10px 20px;
     font-weight: 100;
 }
+.color-main {
+    color: var(--red-color);
+}
+
 
 /* End  general */
 /* Start header */
@@ -1862,3 +1867,76 @@ ul.breadcrumb li a:hover {
     width: 100px;
 }
 /* end rates page */
+/* start address page */
+.address {
+    width: 80%;
+    margin: 5rem auto;
+    padding: 2rem 0;
+    background: #fff;
+    border-top: 5px solid var(--red-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px 23px rgb(165 165 165 / 16%);
+}
+.address .addrss-title {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--red-color);
+}
+.address .steps {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0; 
+}
+.address .steps span {
+    display: inline-block;
+    width: 12%;
+    height: 0.5rem;
+    background-color: var(--pink-color);
+    border-radius: 50rem;
+}
+.address .steps .active {
+    background-color: var(--red-color);
+}
+label {
+    padding: 0.5rem 1rem;
+}
+.address-select{
+    background-color: var(--bg-color);
+    border-radius: 1em;
+    padding: 0.5rem 1rem;
+    border-color: #dee2e6;
+}
+.address-select:focus{
+    border-color: var(--red-color);
+    box-shadow: none;
+}
+.address-box {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border:  1px solid var(--red-color);
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+.address-box .edit-link{
+    color: var(--red-color);
+}
+.address .btn-continue{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+}
+.address .btn-back{
+    background-color: #07343E;
+    color: white;
+}
+@media (max-width: 767px){
+    .address {
+        width: 100%;
+    }
+    .line {
+        border: none !important;
+    }
+}
+/* end address */
