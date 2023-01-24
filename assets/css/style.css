@@ -1934,6 +1934,12 @@ ul.breadcrumb li a:hover {
     background-color: #07343E;
     color: white;
 }
+.block-shipping-form, .block-going-form {
+    display: none
+}
+.block-shipping-card, .block-going-card {
+    display: block;
+}
 @media (max-width: 767px){
     .address {
         width: 100%;
@@ -1941,11 +1947,5 @@ ul.breadcrumb li a:hover {
     .line {
         border: none !important;
     }
-}
-.block-shipping-form{
-    display: none
-}
-.block-shipping-card{
-    display: block;
 }
 /* end address */

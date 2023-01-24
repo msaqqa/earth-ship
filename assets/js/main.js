@@ -500,9 +500,8 @@ $("#clients").owlCarousel({
   },
 });
 
-// Get all buttons with class="btn" inside the container
+// start help page
 let shuffles = document.querySelectorAll(".shuffle");
-console.log(shuffles);
 // Loop through the buttons and add the active class to the current/clicked button
 for (let i = 0; i < shuffles.length; i++) {
   shuffles[i].addEventListener("click", function () {
@@ -518,3 +517,44 @@ for (let i = 0; i < shuffles.length; i++) {
     }
   });
 }
+// end help page
+
+// start address page
+let shippingSelect = document.getElementById("shipping-select");
+function show_block_shipping_form() {
+  $(".block-shipping-card").hide();
+  $(".block-shipping-form").show();
+  shippingSelect.value = "enter-new-address";
+}
+function hide_block_shipping_form() {
+  $(".block-shipping-form").hide();
+  $(".block-shipping-card").show();
+}
+function toggleShippingForm() {
+  let optionValue = shippingSelect.options[shippingSelect.selectedIndex].value;
+  if (optionValue === "enter-new-address") {
+    show_block_shipping_form();
+  } else {
+    hide_block_shipping_form();
+  }
+}
+
+let goingSelect = document.getElementById("going-select");
+function show_block_going_form() {
+  $(".block-going-card").hide();
+  $(".block-going-form").show();
+  goingSelect.value = "enter-new-address";
+}
+function hide_block_going_form() {
+  $(".block-going-form").hide();
+  $(".block-going-card").show();
+}
+function toggleGoingForm() {
+  let optionValue = goingSelect.options[goingSelect.selectedIndex].value;
+  if (optionValue === "enter-new-address") {
+    show_block_going_form();
+  } else {
+    hide_block_going_form();
+  }
+}
+// end address page

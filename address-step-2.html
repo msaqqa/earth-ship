@@ -149,167 +149,59 @@
 		<div class="rgba"></div>
 	</section>
 
-	<!-- start rates -->
-	<section class="section-calculator">
-		<div class="container">
-			<div class="w-lg-75 text-center mx-md-auto md-5">
-				<h1 class="h1 lh-sm">Your Rates Are Ready!</h1>
-			</div>
-			<img src="assets/images/element-2.png" class="img-1" alt="img">
-			<div class="shipping-calculator mx-md-auto md-5" id="shipping-calculator">
-				<form action="" class="w-100" method="post">
-					<div class="row py-5">
-						<div class="col-12">
-							<h5>Find the Best Shipping Rates</h5>
+	<!-- start adress step two -->
+	<section class="address">
+			<section class="container">
+      <h2 class="addrss-title px-md-5 px-3">Address Details</h2>
+      <div class="steps px-md-5 px-3">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="row">
+        <div class="col-md-6 p-md-5 p-3">
+          <h4 class="fs-3 fw-bold mb-3">Why Are You Sending This Shipment?</h4>
+          <div>
+            <label class="py-0" for="#address">Select a reason</label>
+            <select class="form-select address-select" id="address" name="address">
+              <option value="">reason 1</option>
+              <option value="">reason 2</option>
+              <option value="">reason 3</option>
+              <option value="">reason 4</option>
+              <option value="">reason 5</option>
+						</select>
+					</div>
+					<h4 class="fs-3 fw-bold my-3">Why Are You Sending This Shipment?</h4>
+					<p class="text-muted lh-lg mb-4">Please provide the date you will be sending your package</p>
+					<div class="row align-items-center">
+						<div class="col-12"><label class="py-0" for="#address">Shipping Date</label></div>
+						<div class="col-auto">
+							<input type="date" class="">
 						</div>
-						<div class="col-md-4">
-							<label for="us_zip_code">From United States Zip Code</label>
-							<div class="input-group mb-3">
-								<span class="input-group-text input-group-calculator" id="us-zip-code">
-									<i class="fas fa-map-marker-alt"></i>
-								</span>
-								<input type="text" id="us_zip_code" name="us_zip_code" class="form-control" placeholder="00972" aria-label="US Zip Code" aria-describedby="us-zip-code">
-							</div>
+						<div class="col-auto">
+							<span id="passwordHelpInline" class="form-text">
+								Choose a date up to 5 days from today.
+							</span>
 						</div>
-						<div class="col-md-4">
-							<label for="" selected_country="">To</label>
-							<div class="input-group mb-3">
-								<span class="input-group-text input-group-calculator" id="basic-addon1">
-									<i class="fas fa-map-marker-alt"></i>
-								</span>
-								<select autocomplete="do-not-autofill" class="form-select" id="calculator-country" name="selected_country" aria-required="true">
-									<option value="">Palestine</option>
-								</select>
-							</div>
-							</div>
-							<div class="col-md-4">
-								<label for="">33</label>
-								<div class="input-group ">
-									<span class="input-group-text input-group-calculator" id="basic-addon1">
-										<i class="fas fa-weight-hanging"></i>
-									</span>
-									<input type="text" class="form-control" placeholder="Weight " aria-label="Weight " aria-describedby="basic-addon1">
-								</div>
-								<span class="weight-helper-txt">Enter a value up to 70 lbs</span>
-							</div>
-							<div class="col-md-12 d-flex align-items-center my-3 justify-content-center justify-content-md-start">
-								<label class="me-2 fw-bold text-dark">Package Dimensions:</label>
-								<button class="btn btn-main rounded-pill" type="button">22 in X 12 in X 21 in</button>
-							</div>
-							<div class="col-12 text-center">
-								<button class="btn btn-main" type="button">Update Rates</button>
-							</div>
-						</div>
-					</form>
+					</div>
 				</div>
-				<div class="text-end">
-						<img src="assets/images/element-2.png" class="img-2" alt="img">
+				<div class="col-md-6 p-md-5 p-3">
+					<div class="address-box">
+						<h5 class="fw-bold pb-2 border-bottom">Box Contents</h5>
+						<div class="d-flex justify-content-between align-items-center mb-2">
+							<span class="text-muted">Total Box Value</span>
+							<span class="fw-bold">$0</span>
+						</div>
+          </div>
 				</div>
-		</div>
-	</section>
+      
+    </div>
+  </section>
 
-	<section class="py-5 text-center">
-		<div class="container">
-			<h2 class="h1 mb-3">1 Result Found </h2>
-			<p class="text-muted fs-5">
-				<strong class="text-dark fs-5">Please note: </strong>All shipments must be dropped off with the carrier and a printer is required for all services.
-			</p>
-		</div>
-	</section>
 
-	<section class="rates py-5">
-		<div class="container">
-			<div class="shipping mx-md-auto">
-				<div class="shipping-head">Best Value</div>
-				<div class="row p-5">
-					<div class="col-md-4 d-flex align-items-center mb-3">
-						<img class="w-25 me-4" src="./assets/images/second-why-ship.png" alt="">
-						<div>
-							<h5>DHL Express Medium Box</h5>
-							<h6 class="text-muted">Over 36 &amp; up to 60 linear inches</h6>
-							<span onclick="show_block_dimensions()" class="text-decoration-underline DHL-link">More about DHL Express</span>
-						</div>
-					</div>
-					<div class="col-md-4 mb-3">
-						<ul class="text-muted list-unstyled dhl-list">
-							<li class="mb-2">Top-Rated Global Carrier</li>
-							<li class="mb-2">3 - 8 Business Days</li>
-							<li class="mb-2">Global Door-to-Door Tracking</li>
-							<li>TruePrice Weight-Based Pricing</li>
-						</ul>
-					</div>
-					<div class="col-md-4 d-flex align-items-center mb-3">
-						<img class="me-3 w-25" src="./assets/images/Frame.png" alt="">
-						<h4>$648.74</h4>
-					</div>
-					<div class="col-md-12 d-flex align-items-center">
-						
-					</div>
-					<div class="col-12 text-center mt-3">
-						<button class="btn btn-main">Ship Now</button>
-					</div>
-				</div>
-				<div class="block-dhl-express py-3" style="display: none;">
-					<div class="container">
-						<i class="fa-solid fa-xmark close-icon" onclick="hide_block_dimensions()"></i>
-						<h2 class="text-center mb-5">DHL Express Medium Box</h2>
-						<div class="row">
-							<div class="col-md-7">
-								<h4>Service Details</h4>
-								<p class="text-muted mb-2">
-									Your package is shipped to our facility in Sarasota, Florida, via USPS (United States Postal Service) , where our team of experts verifies its size and contents, prepares the export documentation, ensures your shipment is safely packed for transit, and ships it via DHL Express. This process is for your protection and helps to ensure successful delivery.
-								</p>
-								<p class="text-muted">PLUS, you get TruePrice™ upfront rates based on package weight only*! </p>
-							</div>
-							<div class="col-md-5">
-								<h4>Service Details</h4>
-								<ul class="text-muted list-unstyled dhl-list">
-									<li class="mb-2">Top-rated global carrier</li>
-									<li class="mb-2">Drop off at any USPS location</li>
-									<li class="mb-2">International delivery in 1 to 4 business days after your package leaves our facility</li>
-									<li class="mb-2">Door-to-door tracking</li>
-									<li>Protect your shipment for up to $500</li>
-								</ul>
-							</div>
-							<div class="col-md-7">
-								<h4>Service Details</h4>
-								<ul class="text-muted list-unstyled">
-									<li class="mb-2">
-										<img src="./assets/images/service-details-1.png" alt="">
-										Restricted &amp; Prohibited Items
-									</li>
-									<li class="mb-2">
-										<img src="./assets/images/service-details-2.png" alt="">
-										Between 37 and 60 linear inches (length + width + height)
-									</li>
-									<li class="mb-2">
-										<img src="./assets/images/service-details-3.png" alt="">
-										70 lbs maximum weight
-									</li>
-									<li>
-										<img src="./assets/images/service-details-4.png" alt="">
-										Packages submitted with incorrect dimensions will be subject to additional fees
-									</li>
-								</ul>
-							</div>
-							<div class="col-md-5">
-								<div class="d-flex align-items-center flex-wrap justify-content-evenly">
-									<img class="dhl-img" src="assets/images/first-why-ship.png" alt="img">
-									<img class="dhl-img" src="assets/images/second-why-ship.png" alt="img">
-									<img class="dhl-img" src="assets/images/third-why-ship.png" alt="img">
-									<img class="dhl-img" src="assets/images/fourth-why-ship.png" alt="img">
-							</div>
-							<button class="btn btn-main d-block mx-auto my-3" type="button">Ship Now<br><span>$648.74</span></button>
-							<p class="text-muted fs-6">*TruePrice excludes packages with linear dimensions (length + width + height) greater than 60 inches.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>    
-
-	<footer style="background-image: url(assets/images/bg-footer.png);">
+  <footer style="background-image: url(assets/images/bg-footer.png);">
 		<div class="rgba">
 			<div class="container pb-5">
 				<div class="row">
