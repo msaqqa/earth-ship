@@ -563,6 +563,8 @@ function toggleGoingForm() {
 function show_block_itemForm() {
   // $(".block-shipping-card").hide();
   $(".itemForm").show();
+  var myDiv = document.querySelector(".itemForm");
+  myDiv.scrollIntoView();
 }
 function hide_block_itemForm() {
   $(".itemForm").hide();

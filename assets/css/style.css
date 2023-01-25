@@ -1943,9 +1943,6 @@ ul.breadcrumb li a:hover {
 .box .form-control {
     background-color: var(--bg-color);
 }
-.itemForm label {
-    font-size: 0.8rem;
-}
 .address .fa-circle-info {
     font-size: 1em;
     cursor: pointer;
