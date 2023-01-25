@@ -519,7 +519,7 @@ for (let i = 0; i < shuffles.length; i++) {
 }
 // end help page
 
-// start address page
+// start address page step one
 let shippingSelect = document.getElementById("shipping-select");
 function show_block_shipping_form() {
   $(".block-shipping-card").hide();
@@ -557,4 +557,193 @@ function toggleGoingForm() {
     hide_block_going_form();
   }
 }
-// end address page
+// end address page step one
+
+// start address page step two
+function show_block_itemForm() {
+  // $(".block-shipping-card").hide();
+  $(".itemForm").show();
+}
+function hide_block_itemForm() {
+  $(".itemForm").hide();
+  // $(".block-shipping-card").show();
+}
+
+function show_block_toolDesc() {
+  $(".toolDesc").show();
+}
+function hide_block_toolDesc() {
+  $(".toolDesc").hide();
+}
+function show_block_toolEach() {
+  $(".toolEach").show();
+}
+function hide_block_toolEach() {
+  $(".toolEach").hide();
+}
+function show_block_toolCountry() {
+  $(".toolCountry").show();
+}
+function hide_block_toolCountry() {
+  $(".toolCountry").hide();
+}
+function show_block_toolCondition() {
+  $(".toolCondition").show();
+}
+function hide_block_toolCondition() {
+  $(".toolCondition").hide();
+}
+function show_block_toolProhibited() {
+  $(".toolProhibited").show();
+}
+function hide_block_toolProhibited() {
+  $(".toolProhibited").hide();
+}
+function show_block_toolprotection() {
+  $(".toolprotection").show();
+}
+function hide_block_toolprotection() {
+  $(".toolprotection").hide();
+}
+window.addEventListener("mouseup", function (event) {
+  const toolDesc = document.querySelector(".toolDesc");
+  const toolEach = document.querySelector(".toolEach");
+  const toolCountry = document.querySelector(".toolCountry");
+  const toolCondition = document.querySelector(".toolCondition");
+  const toolProhibited = document.querySelector(".toolProhibited");
+  const toolprotection = document.querySelector(".toolprotection");
+  if (event.target != toolDesc && event.target.parentNode != toolDesc) {
+    toolDesc.style.display = "none";
+  }
+  if (event.target != toolEach && event.target.parentNode != toolEach) {
+    toolEach.style.display = "none";
+  }
+  if (event.target != toolCountry && event.target.parentNode != toolCountry) {
+    toolCountry.style.display = "none";
+  }
+  if (
+    event.target != toolCondition &&
+    event.target.parentNode != toolCondition
+  ) {
+    toolCondition.style.display = "none";
+  }
+  if (
+    event.target != toolProhibited &&
+    event.target.parentNode != toolProhibited
+  ) {
+    toolProhibited.style.display = "none";
+  }
+  if (
+    event.target != toolprotection &&
+    event.target.parentNode != toolprotection
+  ) {
+    toolprotection.style.display = "none";
+  }
+});
+
+let itemForm = document.querySelector(".itemForm");
+
+let descInput = document.querySelector("#desc");
+let quantityInput = document.querySelector("#quantity");
+let eachInput = document.querySelector("#each");
+let countryInput = document.querySelector("#country");
+let conditionInput = document.querySelector("#condition");
+let totalInput = document.querySelector("#total");
+let submitBtn = document.querySelector("#submitBtn");
+
+let listItems = [];
+
+submitBtn.onclick = (e) => {
+  if (
+    descInput.value &&
+    quantityInput.value &&
+    eachInput.value &&
+    countryInput.value &&
+    conditionInput.value
+  ) {
+    const item = {
+      id: Date.now(),
+      Description: descInput.value,
+      Quantity: quantityInput.value,
+      Each: eachInput.value,
+      Country: countryInput.value,
+      Condition: conditionInput.value,
+      Total: quantityInput.value * eachInput.value,
+    };
+
+    // Add Item To Array Of Items
+    listItems.push(item);
+
+    // Add Item To Page
+    viewElementsAtPage(listItems);
+
+    // Calculate Total
+    calculateTotal(listItems);
+
+    // Empty Input Field
+    descInput.value = "";
+    quantityInput.value = "";
+    eachInput.value = "";
+    countryInput.value = "";
+    conditionInput.value = "";
+    totalInput.value = "0";
+
+    // Hide Form
+    hide_block_itemForm();
+  }
+};
+
+function viewElementsAtPage(listItems) {
+  let ContentDiv = document.querySelector("#boxContents");
+
+  // Empty Tasks Div
+  ContentDiv.innerHTML = "";
+
+  listItems.forEach((item, index) => {
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add(
+      "d-flex",
+      "justify-content-between",
+      "align-items-center"
+    );
+
+    let itemCircle = document.createElement("div");
+    itemCircle.classList.add("me-3", "item-circle", "flex-shrink-0");
+    itemCircle.innerHTML = index + 1;
+    mainDiv.appendChild(itemCircle);
+
+    let rowDiv = document.createElement("div");
+    rowDiv.classList.add("row", "mb-2", "flex-grow-1");
+
+    for (const prop in item) {
+      if (prop === "id") {
+        null;
+      } else {
+        let colDiv = document.createElement("div");
+
+        colDiv.classList.add("col-4");
+        let label = document.createElement("label");
+        label.classList.add("fw-bold");
+        label.textContent = prop;
+        colDiv.appendChild(label);
+        let valDiv = document.createElement("div");
+        valDiv.textContent = item[prop];
+        colDiv.appendChild(valDiv);
+
+        rowDiv.appendChild(colDiv);
+      }
+    }
+    mainDiv.appendChild(rowDiv);
+    mainDiv.classList.add("border-bottom", "mb-2");
+    ContentDiv.appendChild(mainDiv);
+  });
+}
+
+function calculateTotal(listItems) {
+  let total = listItems.reduce((acc, curr) => {
+    return (acc += curr.Total);
+  }, 0);
+  let totalBoxValue = document.querySelector("#totalBoxValue");
+  totalBoxValue.textContent = total;
+}
+// end address page step two

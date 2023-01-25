@@ -1856,7 +1856,7 @@ ul.breadcrumb li a:hover {
     display: none;
     position: relative;
 }
-.block-dhl-express .close-icon {
+.close-icon {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -1920,7 +1920,7 @@ ul.breadcrumb li a:hover {
     border-radius: 10px;
     margin-bottom: 2rem;
 }
-.address-box .edit-link{
+.address-box .edit-link {
     color: var(--red-color);
 }
 .address .btn-continue{
@@ -1940,12 +1940,57 @@ ul.breadcrumb li a:hover {
 .block-shipping-card, .block-going-card {
     display: block;
 }
+.box .form-control {
+    background-color: var(--bg-color);
+}
+.itemForm label {
+    font-size: 0.8rem;
+}
+.address .fa-circle-info {
+    font-size: 1em;
+    cursor: pointer;
+}
+.address .classifyDiv{
+    width: 60%;
+}
+.address .toolContent{
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-color);
+    z-index: 1;
+    display: none;
+}
+.address .item-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--red-color);
+    color: white;
+    font-size: 1em;
+}
+
 @media (max-width: 767px){
     .address {
         width: 100%;
     }
     .line {
         border: none !important;
+    }
+    .itemForm label {
+        font-size: 0.7rem;
+    }
+    .classifyDiv {
+        width: 100% !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+    .classifyDiv button {
+        margin-bottom: 1rem;
     }
 }
 /* end address */
