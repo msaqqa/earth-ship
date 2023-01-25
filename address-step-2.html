@@ -151,31 +151,28 @@
 
 	<!-- start adress step two -->
 	<section class="address">
-			<section class="container">
-      <h2 class="addrss-title px-md-5 px-3">Address Details</h2>
-      <div class="steps px-md-5 px-3">
-        <span class="active"></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="row">
-        <div class="col-md-6 p-md-5 p-3">
-          <h4 class="fs-3 fw-bold mb-3">Why Are You Sending This Shipment?</h4>
-          <div>
-            <label class="py-0" for="#address">Select a reason</label>
-            <select class="form-select address-select" id="address" name="address">
-              <option value="">reason 1</option>
-              <option value="">reason 2</option>
-              <option value="">reason 3</option>
-              <option value="">reason 4</option>
-              <option value="">reason 5</option>
+		<div class="container">
+			<h2 class="addrss-title px-md-5 px-3">Address Details</h2>
+			<div class="steps px-md-5 px-3">
+				<span class="active"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="row">
+				<div class="col-md-6 px-md-5 px-3">
+					<h4 class="fs-3 fw-bold mb-4">Why Are You Sending This Shipment?</h4>
+					<div>
+						<select class="form-select address-select" id="address" name="address">
+							<option value="">Select a reason</option>
+							<option value="">reason 2</option>
+							<option value="">reason 3</option>
 						</select>
 					</div>
-					<h4 class="fs-3 fw-bold my-3">Why Are You Sending This Shipment?</h4>
+					<h4 class="fs-3 fw-bold mb-4">Why Are You Sending This Shipment?</h4>
 					<p class="text-muted lh-lg mb-4">Please provide the date you will be sending your package</p>
-					<div class="row align-items-center">
+					<div class="row align-items-center mb-5">
 						<div class="col-12"><label class="py-0" for="#address">Shipping Date</label></div>
 						<div class="col-auto">
 							<input type="date" class="">
@@ -187,18 +184,117 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 p-md-5 p-3">
+				<div class="col-md-6 px-md-5 px-3">
 					<div class="address-box">
 						<h5 class="fw-bold pb-2 border-bottom">Box Contents</h5>
 						<div class="d-flex justify-content-between align-items-center mb-2">
 							<span class="text-muted">Total Box Value</span>
 							<span class="fw-bold">$0</span>
 						</div>
-          </div>
+					</div>
 				</div>
-      
-    </div>
-  </section>
+			</div>
+			<div class="box px-md-5 px-3">
+				<h4 class="fs-2 fw-bold mb-4">What's in the Box?</h4>
+				<p class="text-muted lh-lg mb-4">
+					Provide a description and value for each unique item in your box to reduce the risk of customs delays or rejection.
+				</p>
+				<div class="row mb-2 descriptionBox">
+					<div class="col-6 col-md-4">
+						<label for="description" class="form-label">Item Description</label>
+						<input type="text" class="form-control" id="description" placeholder="0">
+					</div>
+					<div class="col-3 col-md-2">
+						<label for="quantity" class="form-label">Quantity</label>
+						<input type="text" class="form-control" id="quantity" placeholder="0">
+					</div>
+					<div class="col-3 col-md-2">
+						<label for="each" class="form-label">Value Each</label>
+						<input type="text" class="form-control" id="each" placeholder="$ 0">
+					</div>
+				</div>
+				<div class="row mb-2 descriptionBox">
+					<div class="col-6 col-md-4">
+						<label for="description" class="form-label">Where was this made?</label>
+						<select class="form-select form-control" id="description" name="description">
+							<option value="">Select Country</option>
+						</select>
+					</div>
+					<div class="col-3 col-md-2">
+						<label for="quantity" class="form-label">Item Condition</label>
+						<input type="text" class="form-control" id="quantity" placeholder="0">
+					</div>
+					<div class="col-3 col-md-2">
+						<label for="each" class="form-label">Total Value</label>
+						<div class="form-control border-0 bg-transparent color-main" id="each">$ 0</div>
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="button" class="btn btn-main my-5">Classify This Item</button>
+				</div>
+			</div>
+			<div class="classifyDiv py-4 w-50 mx-auto d-flex flex-column flex-md-row align-items-center justify-content-between border-top border-bottom">
+				<button type="button" class="btn btn-main"><i class="fa-solid fa-plus fa-xs"></i> Classify This Item</button>
+				<div>
+					<i class="fa-solid fa-circle-info text-primary"></i>
+					Review the List of <a href="#" class="color-main">Restricted & Prohibited Items</a>
+				</div>
+			</div>
+			<div class="row px-md-5 px-3 mt-5">
+				<div class="col-md-3">
+					<label for="weight" class="form-label">Package Weight</label>
+					<div class="input-group mb-3">
+						<span class="input-group-text bg-transparent color-main" id="us-zip-code">
+							<i class="fa-solid fa-bell"></i>
+						</span>
+						<input type="number" id="weight" class="form-control" placeholder="">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<label for="length" class="form-label">Length</label>
+					<div class="input-group">
+						<span class="input-group-text bg-transparent color-main" id="basic-addon1">
+							<i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+						</span>
+						<input type="number" id="length" class="form-control" placeholder="">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<label for="width" class="form-label">Width</label>
+					<div class="input-group">
+						<span class="input-group-text bg-transparent color-main" id="basic-addon1">
+							<i class="fa-solid fa-arrows-left-right"></i>
+						</span>
+						<input type="number" id="width" class="form-control" placeholder="">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<label for="height" class="form-label">Height</label>
+					<div class="input-group">
+						<span class="input-group-text bg-transparent color-main" id="basic-addon1">
+							<i class="fa-solid fa-arrows-up-down"></i>
+						</span>
+						<input type="number" id="height" class="form-control" placeholder="">
+					</div>
+				</div>
+			</div>
+			<div class="px-md-5 px-3">
+				<h4 class="fs-3 fw-bold my-4">Want to Protect Your Delivery?</h4>
+				<div class="form-check mb-2">
+					<input class="form-check-input" type="checkbox" id="protection">
+					<label class="form-check-label" for="protection">
+						Add up to $100 of delivery protection for just $2.99
+						<i class="fa-solid fa-circle-info text-primary"></i>
+					</label>
+				</div>
+			</div>
+			<div class="position-relative px-md-5 px-3 mt-4">
+				<a class="btn btn-main btn-back" href="#">Back</a>
+				<a class="btn btn-main btn-continue" href="#">Continue</a>
+			</div>
+		</div>
+	</section>
+
 
 
   <footer style="background-image: url(assets/images/bg-footer.png);">
