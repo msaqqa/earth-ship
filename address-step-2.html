@@ -183,8 +183,8 @@
 							</span>
 						</div>
 					</div>
-					<form class="row mb-2 itemForm">
-						<div action="" method="post" class="col-6 mb-2">
+					<form class="row itemForm">
+						<div class="col-12 mb-md-2 mb-2">
 							<label for="desc" class="form-label position-relative">
 								<i class="fa-solid fa-circle-info text-primary" onclick="show_block_toolDesc()"></i>
 								Item Description
@@ -200,11 +200,11 @@
 							</label>
 							<input type="text" class="form-control" id="desc" placeholder="0">
 						</div>
-						<div class="col-3 mb-2">
+						<div class="col-6 col-md-3 mb-2">
 							<label for="quantity" class="form-label">Quantity</label>
 							<input type="text" class="form-control" id="quantity" placeholder="0">
 						</div>
-						<div class="col-3 mb-2">
+						<div class="col-6 col-md-3 mb-2">
 							<label for="each" class="form-label fd-6 position-relative">
 								<i class="fa-solid fa-circle-info text-primary" onclick="show_block_toolEach()"></i>
 								Value Each
@@ -220,7 +220,7 @@
 							</label>
 							<input type="text" class="form-control" id="each" placeholder="$ 0">
 						</div>
-						<div class="col-6 mb-2">
+						<div class="col-12 col-md-6 mb-2">
 							<label for="country" class="form-label position-relative">
 								<i class="fa-solid fa-circle-info text-primary" onclick="show_block_toolCountry()"></i>
 								Where was this made?
@@ -239,7 +239,7 @@
 								<option value="palestine">Palestine</option>
 							</select>
 						</div>
-						<div class="col-3 mb-2">
+						<div class="col-6 col-md-3 mb-2">
 							<label for="condition" class="form-label position-relative">
 								<i class="fa-solid fa-circle-info text-primary" onclick="show_block_toolCondition()"></i>
 								<div class="address-box toolContent toolCondition">
@@ -255,7 +255,7 @@
 							</label>
 							<input type="text" class="form-control" id="condition" placeholder="0">
 						</div>
-						<div class="col-3 mb-2">
+						<div class="col-6 col-md-3 mb-2">
 							<label for="total" class="form-label">Total Value</label>
 							<div class="form-control border-0 bg-transparent color-main" id="total">$ 0</div>
 						</div>
@@ -309,7 +309,37 @@
 				<p class="text-muted lh-lg mb-4">
 					Provide a description and value for each unique item in your box to reduce the risk of customs delays or rejection.
 				</p>
-
+				<div id="boxSection">
+				<!-- <div class="d-flex justify-content-between align-items-center">
+					<div class="me-3 item-circle flex-shrink-0">1</div>
+					<div class="row mb-2 flex-md-grow-1">
+						<div class="col-4 col-md-2 mb-2 ">
+							<label class="fw-bold">Description</label>
+							<div class="text-muted">Lipstick</div>
+						</div>
+						<div class="col-4 col-md-2 mb-2 ">
+							<label class="fw-bold">Description</label>
+							<div class="text-muted">Lipstick</div>
+						</div>
+						<div class="col-4 col-md-2 mb-2 ">
+							<label class="fw-bold">Description</label>
+							<div class="text-muted">Lipstick</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<label class="fw-bold">Quantity</label>
+							<div class="text-muted">1</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<label class="fw-bold">Value Each</label>
+							<div class="text-muted">$ 1</div>
+						</div>
+						<div class="col-12 col-2 text-end text-md-start">
+							<button type="button" class="btn btn-link text-success d-md-block text-decoration-none p-0">Edit</button>
+							<button type="button" class="btn btn-link text-danger d-md-block text-decoration-none p-0">Delete</button>
+						</div>
+					</div>
+				</div> -->
+				</div>
 			</div>
 			<div class="classifyDiv py-4 mx-auto d-flex flex-column flex-md-row align-items-center justify-content-between border-top border-bottom">
 				<button type="button" class="btn btn-main" onclick="show_block_itemForm()">

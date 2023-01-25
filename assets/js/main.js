@@ -674,8 +674,11 @@ submitBtn.onclick = (e) => {
     // Add Item To Array Of Items
     listItems.push(item);
 
-    // Add Item To Page
+    // Add Item To Box Content In The Page
     viewElementsAtPage(listItems);
+
+    // Add Item To Box Section In The Page
+    viewElementsAtSectionBox(listItems);
 
     // Calculate Total
     calculateTotal(listItems);
@@ -696,7 +699,7 @@ submitBtn.onclick = (e) => {
 function viewElementsAtPage(listItems) {
   let ContentDiv = document.querySelector("#boxContents");
 
-  // Empty Tasks Div
+  // Empty List Div
   ContentDiv.innerHTML = "";
 
   listItems.forEach((item, index) => {
@@ -736,6 +739,82 @@ function viewElementsAtPage(listItems) {
     mainDiv.appendChild(rowDiv);
     mainDiv.classList.add("border-bottom", "mb-2");
     ContentDiv.appendChild(mainDiv);
+  });
+}
+
+function viewElementsAtSectionBox(listItems) {
+  let boxSection = document.querySelector("#boxSection");
+
+  // Empty Box Section
+  boxSection.innerHTML = "";
+
+  listItems.forEach((item, index) => {
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add(
+      "d-flex",
+      "justify-content-between",
+      "align-items-center"
+    );
+
+    let itemCircle = document.createElement("div");
+    itemCircle.classList.add("me-3", "item-circle", "flex-shrink-0");
+    itemCircle.innerHTML = index + 1;
+    mainDiv.appendChild(itemCircle);
+
+    let rowDiv = document.createElement("div");
+    rowDiv.classList.add("row", "mb-2", "flex-grow-1");
+
+    for (const prop in item) {
+      if (prop === "id") {
+        null;
+      } else {
+        let colDiv = document.createElement("div");
+
+        colDiv.classList.add("col-4", "col-md-2", "mb-2");
+        let label = document.createElement("label");
+        label.classList.add("fw-bold");
+        label.textContent = prop;
+        colDiv.appendChild(label);
+        let valDiv = document.createElement("div");
+        valDiv.classList.add("text-muted");
+        valDiv.textContent = item[prop];
+        colDiv.appendChild(valDiv);
+
+        rowDiv.appendChild(colDiv);
+      }
+    }
+
+    // add edit and delete
+    let buttonsDiv = document.createElement("div");
+    buttonsDiv.classList.add("col-12", "text-end");
+    let editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.classList.add(
+      "btn",
+      "btn-link",
+      "text-success",
+      "text-decoration-none",
+      "p-0",
+      "me-2"
+    );
+    let deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add(
+      "btn",
+      "btn-link",
+      "text-danger",
+      "text-decoration-none",
+      "p-0"
+    );
+
+    buttonsDiv.append(editBtn, deleteBtn);
+    rowDiv.appendChild(buttonsDiv);
+
+    mainDiv.appendChild(rowDiv);
+    if (index !== listItems.length - 1) {
+      mainDiv.classList.add("border-bottom", "mb-2");
+    }
+    boxSection.appendChild(mainDiv);
   });
 }
 

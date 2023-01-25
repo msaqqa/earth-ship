@@ -1972,6 +1972,7 @@ ul.breadcrumb li a:hover {
     background-color: var(--red-color);
     color: white;
     font-size: 1em;
+    line-height: 20px;
 }
 
 @media (max-width: 767px){
@@ -1981,16 +1982,20 @@ ul.breadcrumb li a:hover {
     .line {
         border: none !important;
     }
-    .itemForm label {
-        font-size: 0.7rem;
-    }
     .classifyDiv {
         width: 100% !important;
         border: none !important;
-        padding: 0 !important;
     }
     .classifyDiv button {
         margin-bottom: 1rem;
+    }
+    .address .toolContent{
+        width: 200px;
+        left: unset;
+        transform: unset;
+        max-height: 150px;
+        overflow: scroll;
+        padding: 1rem;
     }
 }
 /* end address */
