@@ -1918,7 +1918,7 @@ ul.breadcrumb li a:hover {
     padding: 1.5rem;
     border:  1px solid var(--red-color);
     border-radius: 10px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
 }
 .address-box .edit-link {
     color: var(--red-color);
@@ -1928,7 +1928,7 @@ ul.breadcrumb li a:hover {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
+    min-width: 150px;
 }
 .address .btn-back{
     background-color: #07343E;
