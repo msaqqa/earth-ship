@@ -1803,7 +1803,7 @@ ul.breadcrumb li a:hover {
 }
 /* end help page */
 /* start rates page */
-.rates .shipping {
+.shipping {
     width: 90%;
     box-shadow: 2px 2px 23px rgb(165 165 165 / 16%);
     border-radius: 5px;
@@ -1811,7 +1811,7 @@ ul.breadcrumb li a:hover {
     position: relative;
     background: #fff;
 }
-.rates .shipping .shipping-head {
+.shipping .shipping-head {
     background-color: var(--red-color);
     color: white;
     padding: 1rem;
@@ -1819,11 +1819,11 @@ ul.breadcrumb li a:hover {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 }
-.rates .shipping .DHL-link{
+.shipping .DHL-link{
     color: var(--red-color);
     cursor: pointer;
 }
-.rates .dhl-list li::before{
+.dhl-list li::before{
     content: "\f00c";
     font-family: "Font Awesome 5 free";
     font-weight: 700;
@@ -1838,7 +1838,7 @@ ul.breadcrumb li a:hover {
     margin-right: 0.5rem;
 }
 @media (max-width: 767px){
-    .rates .shipping {
+    .shipping {
         width: 100%;
     }
 }

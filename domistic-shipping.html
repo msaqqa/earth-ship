@@ -1,0 +1,466 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Earthship</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="assets/images/crowdious_logo@2x.png"> -->
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.default.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/media.css">
+	<style>
+		* {font-family: 'Tajawal', sans-serif;}
+	</style>
+	<script>
+			FontAwesomeConfig = { autoReplaceSvg: false }
+	</script>
+</head>
+<body>
+  <div class="mobile-menu">
+		<div class="menu-mobile">
+			<div class="mmenu">
+				<ul>
+					<li>
+						<a href="index.html"><img src="assets/images/logo.png" class="" alt=""></a>
+					</li>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="#">ship now</a>
+					</li>
+					<li>
+						<a href="#">track package</a>
+					</li>
+					<li>
+						<a href="#">find drop off location</a>
+					</li>
+					<li>
+						<a href="#"><img src="assets/images/globe.png" alt=""></a>
+					</li>
+					<li>
+						<a href="#"><img src="assets/images/shopping-cart.png" alt=""></a>
+					</li>
+					<li>
+						<a href="#"><img src="assets/images/user.png" alt=""></a>
+					</li>
+					<li>
+						<a href="#"><img src="assets/images/right-align.png" alt=""></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="m-overlay"></div>
+	</div>
+	<div class="side-bar" id="side-bar">
+		<div class="row">
+			<div class="col-lg-10 col-10 text-center">
+				<img src="assets/images/logo-footer.png" class="logo-side-bar" alt="logo">
+			</div>
+			<div class="col-lg-2 col-2">
+				<i class="fa-solid fa-xmark" onclick="hide_side_bar()"></i>
+			</div>
+			<div class="col-12">
+				<ul class="ul-first-side-bar mt-3">
+					<li class="active">Home</li>
+					<li>Ship Now</li>
+					<li>Track Package</li>
+					<li>Find Drop Off Location</li>
+					<li>My Account</li>
+					<li>My Shipments</li>
+					<li>Address Book</li>
+					<li>Payment Info</li>
+				</ul>
+				<hr>
+				<ul class="ul-first-side-bar mt-3">
+					<li>Blog</li>
+					<li>How It Works</li>
+					<li>Can I Ship It?</li>
+					<li>FAQ</li>
+					<li>Contact Us</li>
+					<li>Log Out</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<nav class="mt-3">
+		<div class="container">
+			<div class="row box">
+				<div class="col-lg-4">
+					<div class="logo">
+						<a href="index.html">
+							 <img src="assets/images/logo.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-5 col-nav">
+					<ul class="nav  main_menu">
+						<li class="nav-item d_media">
+							<a href="categories.html" class="drop-home">ship now</a>
+						</li>
+						<li class="nav-item d_media">
+							<a href="about.html" class="drop-home">track package</a>
+						</li>
+						<li class="nav-item d_media">
+							<a href="#" class="drop-home">find drop off location</a>
+						</li>
+						<!-- <li class="nav-item  dropdown d_media">
+							<a href="#" class="dropdown-toggle drop-home" onclick="myBtn()" data-toggle="dropdown" role="button">Learn
+								<span class="caret"></span>
+							</a>
+							<div id="myDropdown" class="dropdown-content">
+								<a href="faqs.html">FAQs</a>
+								<a href="how-it-works.html">How it works</a>
+							</div>
+						</li> -->
+					</ul>
+					<button type="button" class="hamburger is-closed">
+						<span class="hamb-top"></span>
+						<span class="hamb-middle"></span>
+						<span class="hamb-bottom"></span>
+					</button>
+				</div>
+				<div class="col-lg-3 d_media">
+					<div class="btns-auth">
+						<img src="assets/images/globe.png" alt="">
+						<img src="assets/images/shopping-cart.png" alt="">
+						<img src="assets/images/user.png" alt="">
+						<img src="assets/images/right-align.png" onclick="show_side_bar()" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<section class="slider about" style="background-image: url(assets/images/bg-about.png);">
+		<div class="rgba"></div>
+	</section>
+
+  <!-- start domistic shipping -->
+  <section class="address">
+    <div class="container">
+      <h2 class="addrss-title px-md-5 px-3">Domistic shipping</h2>
+      <div class="steps px-md-5 px-3">
+        <span class="active"></span>
+        <span class="active"></span>
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="px-md-5 px-3">
+        <h4 class="fs-3 fw-bold my-4">Do you want domistic shipping?</h4>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="yes">
+          <label class="form-check-label" for="yes">Yes</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="no">
+          <label class="form-check-label" for="no">No</label>
+        </div>
+        <h4 class="fs-3 fw-bold my-4">Select Shipping method</h4>
+      </div>
+      <div class="shipping w-100 mx-md-auto mb-5">
+        <div class="shipping-head">Best Value</div>
+        <div class="row p-5">
+          <div class="col-md-4 d-flex flex-column flex-md-row align-items-md-center mb-3">
+            <div class="form-check p-0 d-flex flex-row flex-md-column align-items-center text-md-center me-3 mb-2">
+              <input class="form-check-input rounded-circle mx-0 mb-2" type="checkbox" id="dhl">
+              <label role="button" for="dhl" class="ms-2">
+                <img width="80" src="./assets/images/second-why-ship.png" alt="">
+              </label>
+            </div>
+            <div class="flex-grow-0">
+              <h5>DHL Express Medium Box</h5>
+              <h6 class="text-muted">Over 36 &amp; up to 60 linear inches</h6>
+              <span onclick="show_block_dimensions()" class="text-decoration-underline DHL-link">More about DHL Express</span>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <ul class="text-muted list-unstyled dhl-list">
+              <li class="mb-2">Top-Rated Global Carrier</li>
+              <li class="mb-2">3 - 8 Business Days</li>
+              <li class="mb-2">Global Door-to-Door Tracking</li>
+              <li>TruePrice Weight-Based Pricing</li>
+            </ul>
+          </div>
+          <div class="col-md-4 d-flex align-items-center mb-3">
+            <img class="me-3 w-25" src="./assets/images/Frame.png" alt="">
+            <h4>$648.74</h4>
+          </div>
+          <div class="col-md-12 d-flex align-items-center">
+          </div>
+        </div>
+        <div class="block-dhl-express py-3" style="display: none;">
+          <div class="container">
+            <i class="fa-solid fa-xmark close-icon" onclick="hide_block_dimensions()"></i>
+            <h2 class="text-center mb-5">DHL Express Medium Box</h2>
+            <div class="row">
+              <div class="col-md-7">
+                <h4>Service Details</h4>
+                <p class="text-muted mb-2">
+                  Your package is shipped to our facility in Sarasota, Florida, via USPS (United States Postal Service) , where our team of experts verifies its size and contents, prepares the export documentation, ensures your shipment is safely packed for transit, and ships it via DHL Express. This process is for your protection and helps to ensure successful delivery.
+                </p>
+                <p class="text-muted">PLUS, you get TruePrice™ upfront rates based on package weight only*! </p>
+              </div>
+              <div class="col-md-5">
+                <h4>Service Details</h4>
+                <ul class="text-muted list-unstyled dhl-list">
+                  <li class="mb-2">Top-rated global carrier</li>
+                  <li class="mb-2">Drop off at any USPS location</li>
+                  <li class="mb-2">International delivery in 1 to 4 business days after your package leaves our facility</li>
+                  <li class="mb-2">Door-to-door tracking</li>
+                  <li>Protect your shipment for up to $500</li>
+                </ul>
+              </div>
+              <div class="col-md-7">
+                <h4>Service Details</h4>
+                <ul class="text-muted list-unstyled">
+                  <li class="mb-2">
+                    <img src="./assets/images/service-details-1.png" alt="">
+                    Restricted &amp; Prohibited Items
+                  </li>
+                  <li class="mb-2">
+                    <img src="./assets/images/service-details-2.png" alt="">
+                    Between 37 and 60 linear inches (length + width + height)
+                  </li>
+                  <li class="mb-2">
+                    <img src="./assets/images/service-details-3.png" alt="">
+                    70 lbs maximum weight
+                  </li>
+                  <li>
+                    <img src="./assets/images/service-details-4.png" alt="">
+                    Packages submitted with incorrect dimensions will be subject to additional fees
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-5">
+                <div class="d-flex align-items-center flex-wrap justify-content-evenly">
+                  <img class="dhl-img" src="assets/images/first-why-ship.png" alt="img">
+                  <img class="dhl-img" src="assets/images/second-why-ship.png" alt="img">
+                  <img class="dhl-img" src="assets/images/third-why-ship.png" alt="img">
+                  <img class="dhl-img" src="assets/images/fourth-why-ship.png" alt="img">
+              </div>
+              <button class="btn btn-main d-block mx-auto my-3" type="button">Ship Now<br><span>$648.74</span></button>
+              <p class="text-muted fs-6">*TruePrice excludes packages with linear dimensions (length + width + height) greater than 60 inches.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shipping w-100 mx-md-auto mb-5">
+        <div class="shipping-head">Best Value</div>
+        <div class="row p-5">
+          <div class="col-md-4 d-flex flex-column flex-md-row align-items-md-center mb-3">
+            <div class="form-check p-0 d-flex flex-row flex-md-column align-items-center text-md-center me-3 mb-2">
+              <input class="form-check-input rounded-circle mx-0 mb-2" type="checkbox" id="dhl">
+              <label role="button" for="dhl" class="ms-2">
+                <img width="80" src="./assets/images/second-why-ship.png" alt="">
+              </label>
+            </div>
+            <div class="flex-grow-0">
+              <h5>DHL Express Medium Box</h5>
+              <h6 class="text-muted">Over 36 &amp; up to 60 linear inches</h6>
+              <span onclick="show_block_dimensions()" class="text-decoration-underline DHL-link">More about DHL Express</span>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <ul class="text-muted list-unstyled dhl-list">
+              <li class="mb-2">Top-Rated Global Carrier</li>
+              <li class="mb-2">3 - 8 Business Days</li>
+              <li class="mb-2">Global Door-to-Door Tracking</li>
+              <li>TruePrice Weight-Based Pricing</li>
+            </ul>
+          </div>
+          <div class="col-md-4 d-flex align-items-center mb-3">
+            <img class="me-3 w-25" src="./assets/images/Frame.png" alt="">
+            <h4>$648.74</h4>
+          </div>
+          <div class="col-md-12 d-flex align-items-center">
+          </div>
+        </div>
+        <div class="block-dhl-express py-3" style="display: none;">
+          <div class="container">
+            <i class="fa-solid fa-xmark close-icon" onclick="hide_block_dimensions()"></i>
+            <h2 class="text-center mb-5">DHL Express Medium Box</h2>
+            <div class="row">
+              <div class="col-md-7">
+                <h4>Service Details</h4>
+                <p class="text-muted mb-2">
+                  Your package is shipped to our facility in Sarasota, Florida, via USPS (United States Postal Service) , where our team of experts verifies its size and contents, prepares the export documentation, ensures your shipment is safely packed for transit, and ships it via DHL Express. This process is for your protection and helps to ensure successful delivery.
+                </p>
+                <p class="text-muted">PLUS, you get TruePrice™ upfront rates based on package weight only*! </p>
+              </div>
+              <div class="col-md-5">
+                <h4>Service Details</h4>
+                <ul class="text-muted list-unstyled dhl-list">
+                  <li class="mb-2">Top-rated global carrier</li>
+                  <li class="mb-2">Drop off at any USPS location</li>
+                  <li class="mb-2">International delivery in 1 to 4 business days after your package leaves our facility</li>
+                  <li class="mb-2">Door-to-door tracking</li>
+                  <li>Protect your shipment for up to $500</li>
+                </ul>
+              </div>
+              <div class="col-md-7">
+                <h4>Service Details</h4>
+                <ul class="text-muted list-unstyled">
+                  <li class="mb-2">
+                    <img src="./assets/images/service-details-1.png" alt="">
+                    Restricted &amp; Prohibited Items
+                  </li>
+                  <li class="mb-2">
+                    <img src="./assets/images/service-details-2.png" alt="">
+                    Between 37 and 60 linear inches (length + width + height)
+                  </li>
+                  <li class="mb-2">
+                    <img src="./assets/images/service-details-3.png" alt="">
+                    70 lbs maximum weight
+                  </li>
+                  <li>
+                    <img src="./assets/images/service-details-4.png" alt="">
+                    Packages submitted with incorrect dimensions will be subject to additional fees
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-5">
+                <div class="d-flex align-items-center flex-wrap justify-content-evenly">
+                  <img class="dhl-img" src="assets/images/first-why-ship.png" alt="img">
+                  <img class="dhl-img" src="assets/images/second-why-ship.png" alt="img">
+                  <img class="dhl-img" src="assets/images/third-why-ship.png" alt="img">
+                  <img class="dhl-img" src="assets/images/fourth-why-ship.png" alt="img">
+              </div>
+              <button class="btn btn-main d-block mx-auto my-3" type="button">Ship Now<br><span>$648.74</span></button>
+              <p class="text-muted fs-6">*TruePrice excludes packages with linear dimensions (length + width + height) greater than 60 inches.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-md-5 px-3">
+				<h4 class="fs-3 fw-bold my-4">Want to Protect Your Delivery?</h4>
+				<div class="form-check mb-2">
+					<input checked class="form-check-input" type="checkbox" id="protection">
+					<label class="form-check-label" for="protection">Add up to $100 of delivery protection for just $2.99</label>
+					<div class="d-inline-block position-relative">
+						<i class="fa-solid fa-circle-info text-primary" onclick="show_block_toolprotection()"></i>
+						<div class="address-box toolContent toolprotection">
+							<i class="fa-solid fa-xmark close-icon" onclick="hide_block_toolprotection()"></i>
+							<p class="text-muted">List each item separately, describing the item in a few words, including material (e.g. cotton, gold, etc.) and other details. For example:</p>
+							<ul>
+								<li>Blouse, rayon, women’s</li>
+								<li>Pitcher, ceramic, antique</li>
+								<li>Hand tool set, metal and plastic, new</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+      <div class="px-md-5 px-3">
+        <label for="length" class="form-label">Length</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">$</span>
+          <span class="input-group-text rounded-end" id="basic-addon1">$ 100</span>
+          <span class="input-group-text bg-transparent color-main ms-3 rounded-start" id="basic-addon1">$ 3</span>
+        </div>
+      </div>
+      <div class="position-relative px-md-5 px-3 mt-4">
+        <a class="btn btn-main btn-back" href="#">Back</a>
+        <a class="btn btn-main btn-continue" href="#">Continue</a>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <footer style="background-image: url(assets/images/bg-footer.png);">
+		<div class="rgba">
+			<div class="container pb-5">
+				<div class="row">
+					<div class="col-lg-4 col-sm-12 col-12">
+						<img src="assets/images/logo-footer.png" height="50px" alt="logo">
+						<h6>
+							“Vestibulum, cum nam non amet consectetur morbi aenean condimentum eget. Ultricies integer
+							nunc neque accumsan laoreet.
+							Viverra nibh ultrices.”
+						</h6>
+					</div>
+					<div class="col-lg-2 col-sm-12 col-6">
+						<ul>
+							<li class="text-white">Our Company</li>
+							<li>About Us</li>
+							<li>Blog</li>
+							<li>Your Privacy Rights</li>
+						</ul>
+					</div>
+					<div class="col-lg-2 col-sm-12 col-6">
+						<ul>
+							<li class="text-white">Customer Service</li>
+							<li>Track Package</li>
+							<li>Find Drop Off Location</li>
+							<li>Can I Ship It?</li>
+							<li>FAQ</li>
+							<li>Contact Us</li>
+						</ul>
+					</div>
+					<div class="col-lg-4 col-sm-12 col-12">
+						<ul>
+							<li class="text-white">Follow us on social:</li>
+							<li>
+								<ul class="ul-icons">
+									<li><i class="fa-brands fa-twitter"></i></li>
+									<li><i class="fa-brands fa-linkedin"></i></li>
+									<li><i class="fa-brands fa-instagram"></i></li>
+									<li><i class="fa-brands fa-youtube"></i></li>
+									<li><i class="fa-brands fa-facebook"></i></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="ul-imgs">
+									<li><img src="assets/images/paypal.png" alt=""></li>
+									<li><img src="assets/images/visa.png" alt=""></li>
+									<li><img src="assets/images/discover.png" alt=""></li>
+									<li><img src="assets/images/Mastercard 1.png" alt=""></li>
+									<li><img src="assets/images/apple-pay.png" alt=""></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="col-lg-5 col-sm-12 col-12 text-end d_media">
+							<a href="#" class="scrollup"><i class="fa-solid fa-angle-up"></i></a>
+					</div> -->
+				</div>
+			</div>
+			<div class="row end-row-footer" style="margin: 0px;">
+				<div class="col-lg-6 col-sm-12" style="margin: auto;">
+					<ul class="ul-links-footer">
+						<li>©2022 Stake. All rights reserved</li>
+						<li>XML Sitemap</li>
+						<li>Terms &amp; Conditions</li>
+						<li>Privacy Policy</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/popper.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" "=""></script>
+	<script src=" assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/all.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
