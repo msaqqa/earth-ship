@@ -568,6 +568,8 @@ function show_block_itemForm() {
 }
 function hide_block_itemForm() {
   $(".itemForm").hide();
+  var myDiv = document.querySelector("#listItems");
+  myDiv.scrollIntoView();
 }
 
 function show_block_toolDesc() {
@@ -834,6 +836,17 @@ function deleteItem(id) {
     if (item.id === id) {
       listItems.splice(item, 1);
       console.log(listItems);
+
+      // Empty Input Field
+      descInput.value = "";
+      quantityInput.value = "";
+      eachInput.value = "";
+      countryInput.value = "";
+      conditionInput.value = "";
+      totalDiv.textContent = "0";
+
+      // Hide Form With Update Data
+      hide_block_itemForm();
     }
   });
 
