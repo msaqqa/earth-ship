@@ -559,16 +559,15 @@ function toggleGoingForm() {
 }
 // end address page step one
 
+//////////////////////////////////////////////////////////////////
 // start address page step two
 function show_block_itemForm() {
-  // $(".block-shipping-card").hide();
   $(".itemForm").show();
   var myDiv = document.querySelector(".itemForm");
   myDiv.scrollIntoView();
 }
 function hide_block_itemForm() {
   $(".itemForm").hide();
-  // $(".block-shipping-card").show();
 }
 
 function show_block_toolDesc() {
@@ -643,19 +642,19 @@ window.addEventListener("mouseup", function (event) {
   }
 });
 
-let itemForm = document.querySelector(".itemForm");
-
 let descInput = document.querySelector("#desc");
 let quantityInput = document.querySelector("#quantity");
 let eachInput = document.querySelector("#each");
 let countryInput = document.querySelector("#country");
 let conditionInput = document.querySelector("#condition");
-let totalInput = document.querySelector("#total");
+let totalDiv = document.querySelector("#total");
 let submitBtn = document.querySelector("#submitBtn");
 
 let listItems = [];
 
-submitBtn.onclick = (e) => {
+submitBtn.onclick = addItemToArray;
+
+function addItemToArray() {
   if (
     descInput.value &&
     quantityInput.value &&
@@ -691,12 +690,12 @@ submitBtn.onclick = (e) => {
     eachInput.value = "";
     countryInput.value = "";
     conditionInput.value = "";
-    totalInput.value = "0";
+    totalDiv.textContent = "0";
 
     // Hide Form
     hide_block_itemForm();
   }
-};
+}
 
 function viewElementsAtPage(listItems) {
   let ContentDiv = document.querySelector("#boxContents");
@@ -799,6 +798,7 @@ function viewElementsAtSectionBox(listItems) {
       "p-0",
       "me-2"
     );
+    editBtn.onclick = () => editItem(item.id);
     let deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.classList.add(
@@ -808,6 +808,7 @@ function viewElementsAtSectionBox(listItems) {
       "text-decoration-none",
       "p-0"
     );
+    deleteBtn.onclick = () => deleteItem(item.id);
 
     buttonsDiv.append(editBtn, deleteBtn);
     rowDiv.appendChild(buttonsDiv);
@@ -827,4 +828,83 @@ function calculateTotal(listItems) {
   let totalBoxValue = document.querySelector("#totalBoxValue");
   totalBoxValue.textContent = total;
 }
+
+function deleteItem(id) {
+  listItems.map((item) => {
+    if (item.id === id) {
+      listItems.splice(item, 1);
+      console.log(listItems);
+    }
+  });
+
+  // Return View Items ON Box Content In The Page
+  viewElementsAtPage(listItems);
+
+  // Return View Items ON Box Section In The Page
+  viewElementsAtSectionBox(listItems);
+
+  // Calculate Total
+  calculateTotal(listItems);
+}
+
+function editItem(id) {
+  let item = listItems.find((item) => {
+    return item.id === id;
+  });
+  descInput.value = item.Description;
+  quantityInput.value = item.Quantity;
+  eachInput.value = item.Each;
+  countryInput.value = item.Country;
+  conditionInput.value = item.Condition;
+  totalDiv.textContent = "$ " + item.Total;
+  submitBtn.textContent = "Update Item";
+  submitBtn.onclick = () => updateItem(id);
+  // Show Form With Item Data
+  show_block_itemForm();
+}
+
+function updateItem(id) {
+  if (
+    descInput.value &&
+    quantityInput.value &&
+    eachInput.value &&
+    countryInput.value &&
+    conditionInput.value
+  ) {
+    listItems.map((item) => {
+      if (item.id === id) {
+        item.Description = descInput.value;
+        item.Quantity = quantityInput.value;
+        item.Each = eachInput.value;
+        item.Country = countryInput.value;
+        item.Condition = conditionInput.value;
+        item.Total = quantityInput.value * eachInput.value;
+      }
+    });
+    // Return View Items ON Box Content In The Page
+    viewElementsAtPage(listItems);
+
+    // Return View Items ON Box Section In The Page
+    viewElementsAtSectionBox(listItems);
+
+    // Calculate Total
+    calculateTotal(listItems);
+
+    // Empty Input Field
+    descInput.value = "";
+    quantityInput.value = "";
+    eachInput.value = "";
+    countryInput.value = "";
+    conditionInput.value = "";
+    totalDiv.textContent = "0";
+
+    // Hide Form With Update Data
+    hide_block_itemForm();
+
+    // Return submitBtn To Add Item
+    submitBtn.textContent = "Classify This Item";
+    submitBtn.onclick = addItemToArray;
+  }
+}
 // end address page step two
+//////////////////////////////////////////////////////////////////
