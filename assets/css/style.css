@@ -1867,7 +1867,8 @@ ul.breadcrumb li a:hover {
     width: 100px;
 }
 /* end rates page */
-/* start address page */
+
+/* start address pages */
 .address {
     width: 80%;
     margin: 5rem auto;
@@ -1940,7 +1941,7 @@ ul.breadcrumb li a:hover {
 .block-shipping-card, .block-going-card {
     display: block;
 }
-.box .form-control {
+.address .box .form-control {
     background-color: var(--bg-color);
 }
 .address .fa-circle-info {
@@ -1971,19 +1972,49 @@ ul.breadcrumb li a:hover {
     font-size: 1em;
     line-height: 20px;
 }
-
+.address .payment a {
+    display: block;
+    position: relative;
+    height: 50px !important;
+    padding: 0;
+    box-shadow: none;
+}
+.address .payment a > img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 70px;
+}
+.address .or{
+    position: relative;
+    text-align: center;
+    margin: 1.75rem 0;
+}
+.address .or::before, .or::after {
+    content: "";
+    position: absolute;
+    width: 45%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #dee2e6;
+}
+.address .or::before { left: 0; }
+.address .or::after { right: 0}
 @media (max-width: 767px){
     .address {
         width: 100%;
     }
-    .line {
+    .address .line {
         border: none !important;
     }
-    .classifyDiv {
+    .address .classifyDiv {
         width: 100% !important;
         border: none !important;
     }
-    .classifyDiv button {
+    .address .classifyDiv button {
         margin-bottom: 1rem;
     }
     .address .toolContent{
@@ -1995,4 +2026,4 @@ ul.breadcrumb li a:hover {
         padding: 1rem;
     }
 }
-/* end address */
+/* end address pages */

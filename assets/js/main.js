@@ -560,6 +560,7 @@ function toggleGoingForm() {
 // end address page step one
 
 //////////////////////////////////////////////////////////////////
+
 // start address page step two
 function show_block_itemForm() {
   $(".itemForm").show();
@@ -573,76 +574,86 @@ function hide_block_itemForm() {
 }
 
 function show_block_toolDesc() {
+  const toolDesc = document.querySelector(".toolDesc");
+  window.addEventListener("mouseup", (event) => {
+    if (event.target != toolDesc && event.target.parentNode != toolDesc) {
+      toolDesc.style.display = "none";
+    }
+  });
   $(".toolDesc").show();
 }
 function hide_block_toolDesc() {
   $(".toolDesc").hide();
 }
 function show_block_toolEach() {
+  const toolEach = document.querySelector(".toolEach");
+  window.addEventListener("mouseup", (event) => {
+    if (event.target != toolEach && event.target.parentNode != toolEach) {
+      toolEach.style.display = "none";
+    }
+  });
   $(".toolEach").show();
 }
 function hide_block_toolEach() {
   $(".toolEach").hide();
 }
 function show_block_toolCountry() {
+  const toolCountry = document.querySelector(".toolCountry");
+  window.addEventListener("mouseup", (event) => {
+    if (event.target != toolCountry && event.target.parentNode != toolCountry) {
+      toolCountry.style.display = "none";
+    }
+  });
   $(".toolCountry").show();
 }
 function hide_block_toolCountry() {
   $(".toolCountry").hide();
 }
 function show_block_toolCondition() {
+  const toolCondition = document.querySelector(".toolCondition");
+  window.addEventListener("mouseup", (event) => {
+    if (
+      event.target != toolCondition &&
+      event.target.parentNode != toolCondition
+    ) {
+      toolCondition.style.display = "none";
+    }
+  });
   $(".toolCondition").show();
 }
 function hide_block_toolCondition() {
   $(".toolCondition").hide();
 }
 function show_block_toolProhibited() {
+  const toolProhibited = document.querySelector(".toolProhibited");
+  window.addEventListener("mouseup", (event) => {
+    if (
+      event.target != toolProhibited &&
+      event.target.parentNode != toolProhibited
+    ) {
+      toolProhibited.style.display = "none";
+    }
+  });
   $(".toolProhibited").show();
 }
 function hide_block_toolProhibited() {
   $(".toolProhibited").hide();
 }
 function show_block_toolprotection() {
+  const toolprotection = document.querySelector(".toolprotection");
+  window.addEventListener("mouseup", (event) => {
+    if (
+      event.target != toolprotection &&
+      event.target.parentNode != toolprotection
+    ) {
+      toolprotection.style.display = "none";
+    }
+  });
   $(".toolprotection").show();
 }
 function hide_block_toolprotection() {
   $(".toolprotection").hide();
 }
-window.addEventListener("mouseup", function (event) {
-  const toolDesc = document.querySelector(".toolDesc");
-  const toolEach = document.querySelector(".toolEach");
-  const toolCountry = document.querySelector(".toolCountry");
-  const toolCondition = document.querySelector(".toolCondition");
-  const toolProhibited = document.querySelector(".toolProhibited");
-  const toolprotection = document.querySelector(".toolprotection");
-  if (event.target != toolDesc && event.target.parentNode != toolDesc) {
-    toolDesc.style.display = "none";
-  }
-  if (event.target != toolEach && event.target.parentNode != toolEach) {
-    toolEach.style.display = "none";
-  }
-  if (event.target != toolCountry && event.target.parentNode != toolCountry) {
-    toolCountry.style.display = "none";
-  }
-  if (
-    event.target != toolCondition &&
-    event.target.parentNode != toolCondition
-  ) {
-    toolCondition.style.display = "none";
-  }
-  if (
-    event.target != toolProhibited &&
-    event.target.parentNode != toolProhibited
-  ) {
-    toolProhibited.style.display = "none";
-  }
-  if (
-    event.target != toolprotection &&
-    event.target.parentNode != toolprotection
-  ) {
-    toolprotection.style.display = "none";
-  }
-});
 
 let descInput = document.querySelector("#desc");
 let quantityInput = document.querySelector("#quantity");
@@ -654,7 +665,7 @@ let submitBtn = document.querySelector("#submitBtn");
 
 let listItems = [];
 
-submitBtn.onclick = addItemToArray;
+submitBtn ? (submitBtn.onclick = addItemToArray) : null;
 
 function addItemToArray() {
   if (
@@ -920,4 +931,63 @@ function updateItem(id) {
   }
 }
 // end address page step two
+
+//////////////////////////////////////////////////////////////////
+
+// start payment page step four
+(function () {
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  var month_selected = "Month"; // current month
+  var option = "";
+  option = "<option>Month</option>"; // first option
+
+  for (let i = 0; i < months.length; i++) {
+    let month_number = i + 1;
+
+    // value month number with 0. [01 02 03 04..]
+    let month = month_number <= 9 ? "0" + month_number : month_number;
+
+    let selected = i === month_selected ? " selected" : "";
+    option +=
+      '<option value="' +
+      month +
+      '"' +
+      selected +
+      ">" +
+      months[i] +
+      "</option>";
+  }
+  document.getElementById("month").innerHTML = option;
+})();
+
+(function () {
+  let year_satart = 1970;
+  let year_end = new Date().getFullYear(); // current year
+  let year_selected = "Year";
+
+  let option = "";
+  option = "<option >Year</option>"; // first option
+
+  for (let i = year_end; i >= year_satart; i--) {
+    let selected = i === year_selected ? " selected" : "";
+    option += '<option value="' + i + '"' + selected + ">" + i + "</option>";
+  }
+
+  document.getElementById("year").innerHTML = option;
+})();
+// end payment page step four
+
 //////////////////////////////////////////////////////////////////
