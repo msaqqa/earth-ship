@@ -665,6 +665,17 @@ let submitBtn = document.querySelector("#submitBtn");
 
 let listItems = [];
 
+// Check if Theres Items In Local Storage
+if (localStorage.getItem("items")) {
+  listItems = JSON.parse(localStorage.getItem("items"));
+  calculateTotal(listItems);
+  //  Checking the Array Of Items It's Not Empty
+  if (listItems.length) {
+    viewElementsAtPage(listItems);
+    viewElementsAtSectionBox(listItems);
+  }
+}
+
 submitBtn ? (submitBtn.onclick = addItemToArray) : null;
 
 function addItemToArray() {
@@ -708,6 +719,9 @@ function addItemToArray() {
     // Hide Form
     hide_block_itemForm();
   }
+
+  // Add Items To Local Storage
+  addDataToLocalStorage(listItems);
 }
 
 function viewElementsAtPage(listItems) {
@@ -846,7 +860,6 @@ function deleteItem(id) {
   listItems.map((item) => {
     if (item.id === id) {
       listItems.splice(item, 1);
-      console.log(listItems);
 
       // Empty Input Field
       descInput.value = "";
@@ -858,17 +871,20 @@ function deleteItem(id) {
 
       // Hide Form With Update Data
       hide_block_itemForm();
+
+      // Return View Items ON Box Content In The Page
+      viewElementsAtPage(listItems);
+
+      // Return View Items ON Box Section In The Page
+      viewElementsAtSectionBox(listItems);
+
+      // Calculate Total
+      calculateTotal(listItems);
+
+      // Add Items To Local Storage
+      addDataToLocalStorage(listItems);
     }
   });
-
-  // Return View Items ON Box Content In The Page
-  viewElementsAtPage(listItems);
-
-  // Return View Items ON Box Section In The Page
-  viewElementsAtSectionBox(listItems);
-
-  // Calculate Total
-  calculateTotal(listItems);
 }
 
 function editItem(id) {
@@ -928,9 +944,16 @@ function updateItem(id) {
     // Return submitBtn To Add Item
     submitBtn.textContent = "Classify This Item";
     submitBtn.onclick = addItemToArray;
+
+    // Add Items To Local Storage
+    addDataToLocalStorage(listItems);
   }
 }
 // end address page step two
+
+function addDataToLocalStorage(arrayOfItems) {
+  window.localStorage.setItem("items", JSON.stringify(arrayOfItems));
+}
 
 //////////////////////////////////////////////////////////////////
 
